@@ -1,0 +1,77 @@
+<mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+    
+    Learn Angular With Yasin
+    
+    <button mat-button [matMenuTriggerFor]="animals">MENÜ</button>
+<mat-menu #animals="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+  <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+</mat-menu>
+
+<mat-menu #vertebrates="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+  <button mat-menu-item>Birds</button>
+  <button mat-menu-item>Mammals</button>
+</mat-menu>
+
+<mat-menu #invertebrates="matMenu">
+  <button mat-menu-item>Insects</button>
+  <button mat-menu-item>Molluscs</button>
+  <button mat-menu-item>Crustaceans</button>
+  <button mat-menu-item>Corals</button>
+  <button mat-menu-item>Arachnids</button>
+  <button mat-menu-item>Velvet worms</button>
+  <button mat-menu-item>Horseshoe crabs</button>
+</mat-menu>
+
+<mat-menu #fish="matMenu">
+  <button mat-menu-item>Baikal oilfish</button>
+  <button mat-menu-item>Bala shark</button>
+  <button mat-menu-item>Ballan wrasse</button>
+  <button mat-menu-item>Bamboo shark</button>
+  <button mat-menu-item>Banded killifish</button>
+</mat-menu>
+</mat-toolbar>
+
+<div class="" style="margin: 10px;">
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+        <h4 class="name">Yasin SUNMAZ</h4>
+        <mat-divider></mat-divider>
+        <button mat-button routerLink="/" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="menu-button">
+            <mat-icon>home</mat-icon>
+            <span>Anasayfa</span>
+        </button>
+        <!-- <button mat-button routerLink="/not-found" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="menu-button">
+            <mat-icon>info</mat-icon>
+            <span>404 Sayfası</span>
+        </button>
+        <button mat-button routerLink="teams" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="menu-button">
+            <mat-icon>info</mat-icon>
+            <span>İç içe router</span>
+        </button>
+        <button mat-button routerLink="lazyload-image" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="menu-button">
+            <mat-icon>info</mat-icon>
+            <span>Lazyload Image</span>
+        </button>
+        <mat-divider></mat-divider>
+        <button mat-button class="menu-button">
+            <mat-icon>help</mat-icon>
+            <span>Help</span>
+        </button> -->
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content mat-elevation-z8">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+</div>
