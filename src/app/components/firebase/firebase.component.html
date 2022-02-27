@@ -1,1 +1,53 @@
-<p>firebase works!</p>
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h4>Yeni Kullanıcı Ekle</h4>
+        <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+            <div class="form-group col-md-3">
+                <label>Adı</label>
+                <input class="form-control" name="firstname" #name="ngModel" [(ngModel)]="user.firstname"
+                    placeholder="Adı" required>
+            </div>
+
+            <div class="form-group col-md-3">
+                <label>Soyadı</label>
+                <input class="form-control" name="lastname" #name="ngModel" [(ngModel)]="user.lastname"
+                    placeholder="Soyadı" required>
+            </div>
+
+            <div class="form-group col-md-3">
+                <label>Cinsiyet</label>
+                <select class="form-control" name="genre" #name=ngModel [(ngModel)]="user.gender">
+                    <option value="true">Erkek</option>
+                    <option value="false">Kadın</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-3">
+                <label>E-posta</label>
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="bi bi-currency-dollar"></i>
+                    </div>
+                    <input class="form-control" name="email" #name="ngModel" [(ngModel)]="user.email"
+                        placeholder="E-posta" required>
+                </div>
+            </div>
+            <div class="form-group col-md-3">
+                <label>Telefon</label>
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="bi bi-currency-dollar"></i>
+                    </div>
+                    <input class="form-control" name="phone" #name="ngModel" [(ngModel)]="user.phone"
+                        placeholder="Telefon" required>
+                </div>
+            </div>
+            <div class="form-group col-md-3">
+                <button type="submit" class="btn btn-success" [disabled]="!userForm.valid"
+                    [disabled]="userForm.invalid">
+                    <i class="bi bi-plus"></i>Kullanıcı Ekle</button>
+            </div>
+        </form>
+        <br>
+    </div>
+</mat-sidenav-content>

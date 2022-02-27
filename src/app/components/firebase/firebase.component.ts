@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import {IUser} from '../../interfaces/user';
+import { UserFirebaseService } from 'src/app/services/user-firebase.service';
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-firebase',
   templateUrl: './firebase.component.html',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirebaseComponent implements OnInit {
 
-  constructor() { }
+  user: IUser = { firstname: '', lastname: '', phone: '', email: '', gender:true };
 
-  ngOnInit(): void {
+  constructor(private userService: UserFirebaseService) { }
+
+  ngOnInit() {
   }
 
+  onSubmit(form: NgForm) {
+    this.userService.addUser(form.value).
+      then(() => form.reset());
+  }
 }

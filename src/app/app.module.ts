@@ -59,6 +59,10 @@ import { FilterComponent } from './components/filter/filter.component';
 import { InputOutputComponent } from './components/input-output/input-output.component';
 import { ModuleComponent } from './components/module/module.component';
 import { RouteNavigationComponent } from './components/route-navigation/route-navigation.component';
+//TODO Firebase
+import { environment } from 'src/environments/environment';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 @NgModule({
   declarations: [
     AppComponent,
@@ -127,7 +131,10 @@ import { RouteNavigationComponent } from './components/route-navigation/route-na
     FormsModule,
     ButtonsModule,
     DropdownModule.forRoot(),
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    //TODO Firebase
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [
     NotificationsService

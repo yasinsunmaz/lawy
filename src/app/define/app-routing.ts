@@ -1,7 +1,11 @@
 import { Routes } from "@angular/router";
+import { FirebaseComponent } from "../components/firebase/firebase.component";
+import { NotFoundComponent } from "../components/not-found/not-found.component";
+import { PageNotFoundComponent } from "../components/page-not-found/page-not-found.component";
 import { HomeComponent } from "../layout/home/home.component";
 export const AppRoutes: Routes =[
     { path: '', component: HomeComponent },
+    { path: 'firebase', component: FirebaseComponent },
     // { path: 'about', component: AboutComponent },
     // { path: 'users', component: UsersComponent },
     // //TODO Url parametre verme
@@ -29,6 +33,7 @@ export const AppRoutes: Routes =[
     //   path:"lazy",
     //   loadChildren: () => import('../lazy/lazy.module').then(m => m.LazyModule)
     // },
-    //{ path: '404', component: NotfoundComponent },
-    //{ path: '**', redirectTo: '/404' }
+    { path: '404-not-found', component: NotFoundComponent },
+    { path: '404', component: PageNotFoundComponent },
+    { path: '**', redirectTo: '/404' }
   ];

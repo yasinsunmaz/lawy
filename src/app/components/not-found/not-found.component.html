@@ -1,1 +1,15 @@
-<p>not-found works!</p>
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1>Sayfa Bulunamadı</h1>
+        <p>Öncelikle sayfa bulunamadı yönlendirmesi için 404 sayfası oluşturmamız gerekiyor.</p>
+        <div class="terminal">
+            <pre><code> ng g c components/not-found </code></pre>
+        </div>
+        <p>Aşağıdaki gibi path alanını ** koyup istediğiniz componenti belirleyebilirsiniz. Bölylece hatalı sayfalar
+            olduğunda direk olarak o componente yönlendirecektir.</p>
+        <div class="terminal">
+            <pre><code> path: 'not-found', component: NotFoundComponent </code></pre>
+            <pre><code> path: '**', redirectTo: '/not-found' </code></pre>
+        </div>
+    </div>
+</mat-sidenav-content>
