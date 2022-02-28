@@ -1,3 +1,6 @@
+h1{
+  font-size:22px;
+}
 h1.title{
   font-size: 22px;
   color: white;
@@ -9,6 +12,13 @@ h4.todo-title{
   padding: 5px 10px;
   font-size: 18px;
   background-color: orange;
+  color: white;
+}
+h4.example{
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 18px;
+  background-color: #d70d45;
   color: white;
 }
 p.todo-name{

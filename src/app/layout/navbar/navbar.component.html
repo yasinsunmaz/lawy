@@ -71,19 +71,15 @@
                     Binding</button>
                 <button mat-menu-item routerLink="two-data-binding">Two-Way Data Binding</button>
             </mat-menu>
-
             <mat-menu #onedatabinding="matMenu">
                 <button mat-menu-item routerLink="string-interpolation">String Interpolation</button>
                 <button mat-menu-item routerLink="property-binding">Property Binding</button>
                 <button mat-menu-item routerLink="event-binding">Event Binding</button>
             </mat-menu>
-
-
-
-            <button mat-button routerLink="/" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+            <button mat-button routerLink="constructor" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
                 class="menu-button">
                 <mat-icon>home</mat-icon>
-                <span>Anasayfa</span>
+                <span>Constructor Kullanımı</span>
             </button>
             <!-- <button mat-button routerLink="/not-found" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="menu-button">
             <mat-icon>info</mat-icon>

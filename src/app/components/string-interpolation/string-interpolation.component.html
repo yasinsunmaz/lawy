@@ -1,6 +1,21 @@
 <mat-sidenav-content>
     <div class="content mat-elevation-z8">
-        <h1>Sayfa Bulunamadı</h1>
-        <p>string-data-binding works!</p>
+        <h1 class="title">String Interpolation Kullanımı</h1>
+        <p>String Interpolation HTML içinde dinamik verileri görüntülemek için kullanılır. Component.ts dosyasında
+            değişiklik yapmanızı ve oradan da component’e ait html (component.html) dosyasına veri almanızı
+            kolaylaştırır.</p>
+            <p>Örnek için <b>components/string-interpolitan</b> dizinini inceleyebilirsiniz.</p>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: String Interpolation Kullanımı
+        </p>
+        <h4 class="example">Uygulamalar</h4>
+        <p><b>Metin:</b> {{title}}</p>
+        <p><b>Matematiksel İşlemler:</b> {{number1+number2}}</p>
+        <p><b>Koşul İşlemi:</b> {{firstValue == 3 ? "Sayı 3" : (firstValue == 10 ? 'Sayı 10' : 'Sayı 10 değil')}}</p>
+        <p><b>Koşul İşlemi 2:</b> {{firstValue == 5 ? "Sayı 5" : (firstValue == 10 ? 'Sayı 10' : 'Sayı 10 değil')}}</p>
+        <p><b>Metin Birleştirme:</b> {{name+ ' ' +surname}}</p>
+        <p><b>Sınıf Kullanımı:</b> Kullanıcı adı: {{users.username}}</p>
+        <p><b>Sınıf Kullanımı:</b> Şire: {{users.password}}</p>
     </div>
 </mat-sidenav-content>

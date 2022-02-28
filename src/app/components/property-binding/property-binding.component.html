@@ -1,14 +1,21 @@
 <mat-sidenav-content>
     <div class="content mat-elevation-z8">
         <h1 class="title">Property Binding Kullanımı</h1>
-        <p>Interface içerisinde istediğimiz özellikleri tanımlayabiliriz.</p>
-        <p>ınteface simlendirmeleri I ile başlamalıdır. Örneğin user için bir interface oluşturacaksak IUser şeklinde
-            bir tanımlama uygun
-            olacaktır.</p>
-        <p>Örnek interface için <b>interfaces/iuser.ts</b> dosyasını inceleyebilirsiniz.</p>
+        <p>Property Binding’de, Angular içinde, one way data binding tekniklerinden biridir. Bu özelliği bir DOM
+            nesnesinin property’sini TypeScript kodunda tanımladığımız bir alana bağlamak için kullanırız. Aslında
+            Angular, String Interpolation özelliğini Property Binding özelliğine dönüştürür.</p>
+        <p>Örnek için <b>components/property-binding</b> dizinini inceleyebilirsiniz.</p>
         <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
         <p class="todo-name">
             <mat-icon>chevron_right</mat-icon>TODO: Property Binding kullanımı
         </p>
+        <h4 class="example">Uygulamalar</h4>
+        <p><b>Matematiksel İşlemler: </b> {{numberOne+numberTwo}}</p>
+        <p><b>Koşul: </b> {{isOnline ? "online" : "offline"}}</p>
+        <p><b>HTML Metin: </b> {{title}}</p>
+        <p><b>HTML: </b> <span [innerHtml]="title"></span></p>
+        <p><b>Görsel: </b> <img [src]="imgPath" [title]="'Yasin SUNMAZ'" /></p>
+        <p><b>Görsel: </b> <img [src]="imgPath" [title]="title" /></p>
+        <p><b>Checkbox: </b> <input type="checkbox" [checked]="isOnline" /></p>
     </div>
 </mat-sidenav-content>
