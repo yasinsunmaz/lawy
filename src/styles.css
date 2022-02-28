@@ -1,5 +1,21 @@
-h1{
+h1.title{
   font-size: 22px;
+  color: white;
+  padding: 10px;
+  background-color: #002b5c;
+}
+h4.todo-title{
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 18px;
+  background-color: orange;
+  color: white;
+}
+p.todo-name{
+  color: orange;
+}
+p.todo-name mat-icon{
+  vertical-align: sub;
 }
 p{
     margin-bottom: 0;

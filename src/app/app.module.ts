@@ -63,6 +63,10 @@ import { RouteNavigationComponent } from './components/route-navigation/route-na
 import { environment } from 'src/environments/environment';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { OneDataBindingComponent } from './components/one-data-binding/one-data-binding.component';
+import { TwoDataBindingComponent } from './components/two-data-binding/two-data-binding.component';
+import { StringInterpolationComponent } from './components/string-interpolation/string-interpolation.component';
+import { IntefaceComponent } from './components/inteface/inteface.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -101,7 +105,11 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
     FilterComponent,
     InputOutputComponent,
     ModuleComponent,
-    RouteNavigationComponent
+    RouteNavigationComponent,
+    OneDataBindingComponent,
+    TwoDataBindingComponent,
+    StringInterpolationComponent,
+    IntefaceComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 <mat-sidenav-content>
     <div class="content mat-elevation-z8">
-        <h1>Sayfa Bulunamadı</h1>
+        <h1 class="title">Sayfa Bulunamadı 404 Sayfası Kullanımı</h1>
         <p>Öncelikle sayfa bulunamadı yönlendirmesi için 404 sayfası oluşturmamız gerekiyor.</p>
         <div class="terminal">
             <pre><code> ng g c components/not-found </code></pre>
@@ -11,5 +11,9 @@
             <pre><code> path: 'not-found', component: NotFoundComponent </code></pre>
             <pre><code> path: '**', redirectTo: '/not-found' </code></pre>
         </div>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: 404 Sayfası Kullanımı
+        </p>
     </div>
 </mat-sidenav-content>

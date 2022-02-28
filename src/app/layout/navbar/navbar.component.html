@@ -49,8 +49,13 @@
                 <mat-icon>home</mat-icon>
                 <span>Anasayfa</span>
             </button>
-            <button mat-button routerLink="404-not-found" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
-                class="menu-button">
+            <button mat-button routerLink="interface" [routerLinkActiveOptions]="{exact:true}"
+                routerLinkActive="active" class="menu-button">
+                <mat-icon>lock</mat-icon>
+                <span>Interface Kullanımı</span>
+            </button>
+            <button mat-button routerLink="404-not-found" [routerLinkActiveOptions]="{exact:true}"
+                routerLinkActive="active" class="menu-button">
                 <mat-icon>lock</mat-icon>
                 <span>404 Sayfaları</span>
             </button>
@@ -59,26 +64,22 @@
                 <mat-icon>save</mat-icon>
                 <span>Firebase Kullanımı</span>
             </button>
-            <button mat-button routerLink="/" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
-                class="menu-button">
-                <mat-icon>home</mat-icon>
-                <span>Anasayfa</span>
-            </button>
-            <button mat-button routerLink="/" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
-                class="menu-button">
-                <mat-icon>home</mat-icon>
-                <span>Anasayfa</span>
-            </button>
-            <button mat-button routerLink="/" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
-                class="menu-button">
-                <mat-icon>home</mat-icon>
-                <span>Anasayfa</span>
-            </button>
-            <button mat-button routerLink="/" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
-                class="menu-button">
-                <mat-icon>home</mat-icon>
-                <span>Anasayfa</span>
-            </button>
+            <button mat-button [matMenuTriggerFor]="databinding" class="menu-button"><mat-icon>save</mat-icon>
+                <span>Databinding Kullanımı</span></button>
+            <mat-menu #databinding="matMenu">
+                <button mat-menu-item [matMenuTriggerFor]="onedatabinding" routerLink="one-data-binding">One-Way Data
+                    Binding</button>
+                <button mat-menu-item routerLink="two-data-binding">Two-Way Data Binding</button>
+            </mat-menu>
+
+            <mat-menu #onedatabinding="matMenu">
+                <button mat-menu-item routerLink="string-interpolation">String Interpolation</button>
+                <button mat-menu-item routerLink="property-binding">Property Binding</button>
+                <button mat-menu-item routerLink="event-binding">Event Binding</button>
+            </mat-menu>
+
+
+
             <button mat-button routerLink="/" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
                 class="menu-button">
                 <mat-icon>home</mat-icon>
