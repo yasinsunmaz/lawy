@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./two-data-binding.component.css']
 })
 export class TwoDataBindingComponent implements OnInit {
-
+  //TODO Two Data Binding Kullanımı
+  name: string | undefined;
   constructor() { }
 
   ngOnInit(): void {

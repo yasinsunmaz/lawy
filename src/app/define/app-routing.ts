@@ -7,6 +7,7 @@ import { OneDataBindingComponent } from "../components/one-data-binding/one-data
 import { PageNotFoundComponent } from "../components/page-not-found/page-not-found.component";
 import { PropertyBindingComponent } from "../components/property-binding/property-binding.component";
 import { StringInterpolationComponent } from "../components/string-interpolation/string-interpolation.component";
+import { TemplateReferenceVariableComponent } from "../components/template-reference-variable/template-reference-variable.component";
 import { TwoDataBindingComponent } from "../components/two-data-binding/two-data-binding.component";
 import { HomeComponent } from "../layout/home/home.component";
 export const AppRoutes: Routes =[
@@ -14,6 +15,7 @@ export const AppRoutes: Routes =[
     { path: 'firebase', component: FirebaseComponent },
     { path: 'one-data-binding', component: OneDataBindingComponent },
     { path: 'two-data-binding', component: TwoDataBindingComponent },
+    { path: 'template-reference-variable', component: TemplateReferenceVariableComponent },
     { path: 'string-interpolation', component: StringInterpolationComponent },
     { path: 'property-binding', component: PropertyBindingComponent },
     { path: 'event-binding', component: EventBindingComponent },

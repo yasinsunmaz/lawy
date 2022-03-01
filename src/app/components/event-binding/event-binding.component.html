@@ -1,12 +1,28 @@
 <mat-sidenav-content>
     <div class="content mat-elevation-z8">
         <h1 class="title">Event Binding Kullanımı</h1>
-        <p>HTML elementlerine yada oluşturduğumuz component laAra data binding yapabiliriz.</p>
         <p>Örnek için <b>components/event-binding</b> dizinini inceleyebilirsiniz.</p>
         <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
         <p class="todo-name">
             <mat-icon>chevron_right</mat-icon>TODO: Event Binding Kullanımı
         </p>
         <h4 class="example">Uygulamalar</h4>
+        <p><b>Keyup Kullanımı</b></p>
+        <input type="text" [value]="name" (keyup)="handleKeyup($event)" />
+        <p>
+            {{ name }}
+        </p>
+        <p><b>Enter Kullanımı</b></p>
+        <input type="text" [value]="name" (input)="handleKeyup($event)" />
+        <p>
+            {{ name }}
+        </p>
+        <p><b>Keyup Enter Kullanımı</b></p>
+        <input type="text" [value]="name" (keyup.enter)="handleKeyup($event)" />
+        <p>
+            {{ name }}
+        </p>
+        <p><b>Click Kullanımı</b></p>
+        <button (click)="handleClear()" mdbBtn>TEMİZLE</button>
     </div>
 </mat-sidenav-content>

@@ -4,17 +4,12 @@
         <p>Örnek için <b>components/two-data-binding</b> dizinini inceleyebilirsiniz.</p>
         <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
         <p class="todo-name">
-            <mat-icon>chevron_right</mat-icon>TODO: Two Data Binding Kullanımı
+            <mat-icon>chevron_right</mat-icon>TODO: Template Reference Variable Kullanımı
         </p>
         <h4 class="example">Uygulamalar</h4>
-        <p><b>ngModel Kullanımı</b></p>
-        <input type="text" [(ngModel)]="name" />
-        <p>
-            {{ name }}
-        </p>
-        <p><b>Property ve Event Binding</b></p>
-        <p>Parantez () kullanarak sadece data binding değil, event binding de yapılmış olur.</p>
-        <input type="text" [(ngModel)]="name" />
+        <p><b>Template Reference Kullanımı</b></p>
+        <input type="text" #nameInput />
+        <button (click)="handleGetValue(nameInput.value)" mdbBtn>Tamam</button>
         <p>
             {{ name }}
         </p>

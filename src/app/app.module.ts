@@ -67,6 +67,7 @@ import { OneDataBindingComponent } from './components/one-data-binding/one-data-
 import { TwoDataBindingComponent } from './components/two-data-binding/two-data-binding.component';
 import { StringInterpolationComponent } from './components/string-interpolation/string-interpolation.component';
 import { IntefaceComponent } from './components/inteface/inteface.component';
+import { TemplateReferenceVariableComponent } from './components/template-reference-variable/template-reference-variable.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -109,7 +110,8 @@ import { IntefaceComponent } from './components/inteface/inteface.component';
     OneDataBindingComponent,
     TwoDataBindingComponent,
     StringInterpolationComponent,
-    IntefaceComponent
+    IntefaceComponent,
+    TemplateReferenceVariableComponent
   ],
   imports: [
     BrowserModule,
