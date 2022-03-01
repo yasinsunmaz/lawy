@@ -47,8 +47,6 @@ import { FirebaseComponent } from './components/firebase/firebase.component';
 import { JwtComponent } from './components/jwt/jwt.component';
 import { IdentityComponent } from './components/identity/identity.component';
 import { SmartTableComponent } from './components/smart-table/smart-table.component';
-import { StructuralDirectivesComponent } from './components/structural-directives/structural-directives.component';
-import { AttributeDirectivesComponent } from './components/attribute-directives/attribute-directives.component';
 import { ErrorHandlingComponent } from './components/error-handling/error-handling.component';
 import { AnimationsComponent } from './components/animations/animations.component';
 import { ConstructorComponent } from './components/constructor/constructor.component';
@@ -68,6 +66,9 @@ import { TwoDataBindingComponent } from './components/two-data-binding/two-data-
 import { StringInterpolationComponent } from './components/string-interpolation/string-interpolation.component';
 import { IntefaceComponent } from './components/inteface/inteface.component';
 import { TemplateReferenceVariableComponent } from './components/template-reference-variable/template-reference-variable.component';
+import { CustomDirectiveComponent } from './components/custom-directive/custom-directive.component';
+import { StructuralDirectiveComponent } from './components/structural-directive/structural-directive.component';
+import { AttributeDirectiveComponent } from './components/attribute-directive/attribute-directive.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -95,8 +96,6 @@ import { TemplateReferenceVariableComponent } from './components/template-refere
     JwtComponent,
     IdentityComponent,
     SmartTableComponent,
-    StructuralDirectivesComponent,
-    AttributeDirectivesComponent,
     ErrorHandlingComponent,
     AnimationsComponent,
     ConstructorComponent,
@@ -111,7 +110,10 @@ import { TemplateReferenceVariableComponent } from './components/template-refere
     TwoDataBindingComponent,
     StringInterpolationComponent,
     IntefaceComponent,
-    TemplateReferenceVariableComponent
+    TemplateReferenceVariableComponent,
+    CustomDirectiveComponent,
+    StructuralDirectiveComponent,
+    AttributeDirectiveComponent
   ],
   imports: [
     BrowserModule,

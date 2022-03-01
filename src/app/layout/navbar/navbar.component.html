@@ -84,6 +84,15 @@
                 <mat-icon>bookmark</mat-icon>
                 <span>Constructor Kullanımı</span>
             </button>
+            <button mat-button [matMenuTriggerFor]="directive" routerLink="directives" class="menu-button">
+                <mat-icon>bookmark</mat-icon>
+                <span>Directive Kullanımı</span>
+            </button>
+            <mat-menu #directive="matMenu">
+                <button mat-menu-item routerLink="custom-directive">Custom Directive</button>
+                <button mat-menu-item routerLink="structural-directive">Structural Directive</button>
+                <button mat-menu-item routerLink="attribute-directive">Attirubute Directive</button>
+            </mat-menu>
         </mat-sidenav>
         <mat-sidenav-content>
             <div class="content mat-elevation-z8">
