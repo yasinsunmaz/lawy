@@ -1,4 +1,5 @@
 import { Routes } from "@angular/router";
+import { ConstructorComponent } from "../components/constructor/constructor.component";
 import { EventBindingComponent } from "../components/event-binding/event-binding.component";
 import { FirebaseComponent } from "../components/firebase/firebase.component";
 import { IntefaceComponent } from "../components/inteface/inteface.component";
@@ -20,6 +21,7 @@ export const AppRoutes: Routes =[
     { path: 'property-binding', component: PropertyBindingComponent },
     { path: 'event-binding', component: EventBindingComponent },
     { path: 'interface', component: IntefaceComponent },
+    { path: 'constructor', component: ConstructorComponent },
     // { path: 'about', component: AboutComponent },
     // { path: 'users', component: UsersComponent },
     // //TODO Url parametre verme

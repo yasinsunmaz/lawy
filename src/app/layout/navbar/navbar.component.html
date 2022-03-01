@@ -49,23 +49,25 @@
                 <mat-icon>home</mat-icon>
                 <span>Anasayfa</span>
             </button>
-            <button mat-button routerLink="interface" [routerLinkActiveOptions]="{exact:true}"
-                routerLinkActive="active" class="menu-button">
-                <mat-icon>lock</mat-icon>
+            <button mat-button routerLink="interface" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                class="menu-button">
+                <mat-icon>bookmark</mat-icon>
                 <span>Interface Kullanımı</span>
             </button>
             <button mat-button routerLink="404-not-found" [routerLinkActiveOptions]="{exact:true}"
                 routerLinkActive="active" class="menu-button">
-                <mat-icon>lock</mat-icon>
+                <mat-icon>bookmark</mat-icon>
                 <span>404 Sayfaları</span>
             </button>
             <button mat-button routerLink="firebase" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
                 class="menu-button">
-                <mat-icon>save</mat-icon>
+                <mat-icon>bookmark</mat-icon>
                 <span>Firebase Kullanımı</span>
             </button>
-            <button mat-button [matMenuTriggerFor]="databinding" class="menu-button"><mat-icon>save</mat-icon>
-                <span>Databinding Kullanımı</span></button>
+            <button mat-button [matMenuTriggerFor]="databinding" class="menu-button">
+                <mat-icon>bookmark</mat-icon>
+                <span>Databinding Kullanımı</span>
+            </button>
             <mat-menu #databinding="matMenu">
                 <button mat-menu-item [matMenuTriggerFor]="onedatabinding" routerLink="one-data-binding">One-Way Data
                     Binding</button>
@@ -77,19 +79,11 @@
                 <button mat-menu-item routerLink="property-binding">Property Binding</button>
                 <button mat-menu-item routerLink="event-binding">Event Binding</button>
             </mat-menu>
-            <button mat-button routerLink="constructor" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
-                class="menu-button">
-                <mat-icon>home</mat-icon>
+            <button mat-button routerLink="constructor" [routerLinkActiveOptions]="{exact:true}"
+                routerLinkActive="active" class="menu-button">
+                <mat-icon>bookmark</mat-icon>
                 <span>Constructor Kullanımı</span>
             </button>
-            <!-- <button mat-button routerLink="/not-found" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="menu-button">
-            <mat-icon>info</mat-icon>
-            <span>404 Sayfası</span>
-        </button>
-        <button mat-button routerLink="teams" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="menu-button">
-            <mat-icon>info</mat-icon>
-            <span>İç içe router</span>
-        </button> -->
         </mat-sidenav>
         <mat-sidenav-content>
             <div class="content mat-elevation-z8">

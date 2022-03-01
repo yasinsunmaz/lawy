@@ -1,1 +1,26 @@
-<p>constructor works!</p>
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1 class="title">Constructor Kullanımı</h1>
+        <p>Constructor kullanımı 2. yöntemde verileri varsayılan olarak atama yaptık. Kod yapısınız inceleyebilirsiniz.</p>
+        <p>Örnek için <b>components/constructor</b> dizinini inceleyebilirsiniz.</p>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: Constructor Kullanımı
+        </p>
+        <h4 class="example">Uygulamalar</h4>
+        <div class="col-md-12">
+            <p><b>Kullanıcı Ekle</b></p>
+        </div>
+        <div class="col-md-4">
+            <input type="text" [(ngModel)]="userInfo.name" class="form-control" />
+            <br>
+            <input type="text" [(ngModel)]="userInfo.surname" class="form-control" />
+            <br>
+            <input type="text" [(ngModel)]="userInfo.email" class="form-control" />
+            <br>
+            <input type="text" [(ngModel)]="userInfo.address" class="form-control" />
+            <br>
+        </div>
+        <div class="col-md-12"><button (click)="onClick()" mdbBtn>GÖNDER</button></div>
+    </div>
+</mat-sidenav-content>
