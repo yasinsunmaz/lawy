@@ -1,64 +1,100 @@
-h1{
-  font-size:22px;
+h1 {
+  font-size: 22px;
 }
-h1.title{
+
+h1.title {
   font-size: 22px;
   color: white;
   padding: 10px;
   background-color: #002b5c;
 }
-h4.todo-title{
+
+h4.todo-title {
   margin-top: 10px;
   padding: 5px 10px;
   font-size: 18px;
   background-color: orange;
   color: white;
 }
-h4.example{
+
+h4.example {
   margin-top: 10px;
   padding: 5px 10px;
   font-size: 18px;
   background-color: #d70d45;
   color: white;
 }
-p.todo-name{
-  color: orange;
+
+footer {
+  height: auto;
+  padding: 10px;
+  text-align: center;
+  background-color: #004a9f;
+  color: white;
 }
-p.todo-name mat-icon{
-  vertical-align: sub;
+
+footer button {
+  color: white;
+}
+
+footer button:hover {
+  background-color: #d70d45;
+  color: white;
+}
+h5.title{
+  margin:10px 0;
+  font-weight: bold;
+  font-size: 16px;
 }
 p{
-    margin-bottom: 0;
+  font-size: 14px;
+}
+span{
+  font-size: 14px;
+}
+p.todo-name {
+  color: orange;
+}
+
+p.todo-name mat-icon {
+  vertical-align: sub;
+}
+
+p {
+  margin-bottom: 0;
+}
+span.example{
+  font-style: italic;
 }
 .terminal {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 6px;
-    padding-top: 45px;
-    margin-top: 8px;
-    overflow: hidden;
-    background-color: rgb(15, 15, 16);
-  }
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 6px;
+  padding-top: 45px;
+  margin-top: 8px;
+  overflow: hidden;
+  background-color: rgb(15, 15, 16);
+}
 
-  .terminal::before {
-    content: "\2022 \2022 \2022";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 4px;
-    background: rgb(58, 58, 58);
-    color: #c2c3c4;
-    width: 100%;
-    font-size: 2rem;
-    line-height: 0;
-    padding: 14px 0;
-    text-indent: 4px;
-  }
+.terminal::before {
+  content: "\2022 \2022 \2022";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: rgb(58, 58, 58);
+  color: #c2c3c4;
+  width: 100%;
+  font-size: 2rem;
+  line-height: 0;
+  padding: 14px 0;
+  text-indent: 4px;
+}
 
-  .terminal pre {
-    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-    color: white;
-    padding: 0 1rem 1rem;
-    margin: 0;
-  }
+.terminal pre {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  color: white;
+  padding: 0 1rem 1rem;
+  margin: 0;
+}

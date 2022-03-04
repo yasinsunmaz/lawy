@@ -12,4 +12,11 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  githubLAWY() {
+    window.open('https://github.com/yasinsunmaz/lawy', '_blank');
+  }
+
+  myWebsite() {
+    window.open('https://yasinsunmaz.com', '_blank');
+  }
 }

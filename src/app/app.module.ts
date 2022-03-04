@@ -69,6 +69,10 @@ import { TemplateReferenceVariableComponent } from './components/template-refere
 import { CustomDirectiveComponent } from './components/custom-directive/custom-directive.component';
 import { StructuralDirectiveComponent } from './components/structural-directive/structural-directive.component';
 import { AttributeDirectiveComponent } from './components/attribute-directive/attribute-directive.component';
+import { AboutLawyComponent } from './components/about-lawy/about-lawy.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { FilterSearchPipe } from './pipes/filter-search.pipe';
+import { BasicPipe } from './pipes/basic.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -113,7 +117,11 @@ import { AttributeDirectiveComponent } from './components/attribute-directive/at
     TemplateReferenceVariableComponent,
     CustomDirectiveComponent,
     StructuralDirectiveComponent,
-    AttributeDirectiveComponent
+    AttributeDirectiveComponent,
+    AboutLawyComponent,
+    ContactComponent,
+    FilterSearchPipe,
+    BasicPipe
   ],
   imports: [
     BrowserModule,

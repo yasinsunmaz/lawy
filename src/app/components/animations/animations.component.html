@@ -1,1 +1,93 @@
-<p>animations works!</p>
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1 class="title">Animasyon Kullanımı</h1>
+        <h5>trigger</h5>
+        <p>
+            Uygulama için tasarlanmış tüm animasyonlar esasında birer etikete sahiptirler. Çalışma zamanında hangi
+            animasyon
+            tetikleniyorsa ilgili animasyona özel bir trigger fırlatılmakta ve süreç başlatılmaktadır.
+            Örnek 1.0;
+            “MesajGoster” animasyonu başlatıldı
+        </p>
+        <h5>state</h5>
+        <p>
+            Animasyonun alacağı aksiyonun değerini kontrol eden fonksiyondur.
+            Örnek 1.1;
+            State değerleri “aç”/”kapat”
+        </p>
+        <h5>style</h5>
+        <p>
+            state fonksiyonu sayesinde yakalanan değerler eşliğinde, hangi değerde hangi stillerin uygulanacağını vs.
+            yani tüm
+            transform ayarlarını style fonksiyonu sayesinde belirtmekteyiz.
+            Örnek 1.2;
+            “aç” isimli state değerinin style yapılanması şöyle;
+            Arkaplan rengi mavi
+            Yazılar turuncu
+            Yazı boyutları 17px vs.
+            “kapat” isimli state değerinin style yapılanması ise şöyle;
+
+            Arkaplan rengi kahverengi
+            Yazılar gri
+            Yazı boyutları 13px vs.
+        </p>
+
+        <h5>transition</h5>
+        <p>
+            state değerlerine özel tanımlanmış style’lar arasında geçişi sağlamak için kullanılan fonksiyondur.
+            Örnek 1.3;
+            Gelen state değeri “aç” ise; “kapat => aç” değil ise “aç => kapat” olacak şekilde geçiş yap.
+        </p>
+
+        <h5>animate</h5>
+        <p>
+            transition fonksiyonuyla yapılacak olan geçişin belirtilen geçiş zamanlaması zarfında gerçekleşmesini
+            sağlayan
+            fonksiyondur. Yani animasyon harekatını başlatan fonksiyondur.
+            Örnek 1.4;
+            Animasyonu 1500 milisaniye içerisinde gerçekleştir.
+        </p>
+        <h5>query</h5>
+        <p>
+            Componentler arası geçiş animasyonlarında componente giriş yahut çıkış durumlarında beklenen style
+            yapılandırmasını
+            sağlamak için kullanılan fonksiyondur. transition fonksiyonu içerisinde parametre olarak kullanılır.
+        </p>
+        <h5>group</h5>
+        <p>
+            İçerisinde birden fazla query olacak olan transition fonksiyonunda bu queryleri group fonksiyonu
+            aracılığıyla tek
+            bir dizi şeklinde tanımlayıp, tutabiliriz.
+        </p>
+        <p>Örnek için <b>components/animations</b> dizinini inceleyebilirsiniz.</p>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: Animation Kullanımı
+        </p>
+        <h4 class="example">Uygulamalar</h4>
+        
+        <button type="button" class="btn btn-primary" (click)="changeSize()">Boyut Değiştir</button>
+        <div [@size]="size"></div>
+        <div [@popOverState]="stateName">
+            <p></p>
+            <p>Hello !</p>
+        </div>
+        <button class="btn btn-primary" (click)="toggle()">Toggle PopOver</button>
+
+        <h3>Balloon Effect</h3>
+        <div (click)="changeState()"
+            style="width:100px;height:100px; border-radius: 100%; margin: 3rem; background-color: green"
+            [@balloonEffect]=currentState>
+        </div>
+
+        <h3>Arcing Ball Animation</h3>
+        <button (click)="toggleBounce()">Arc the Ball!</button>
+        <div [@animateArc]="arc" class="ball"></div>
+        <p></p>
+
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <hr>
+    </div>
+</mat-sidenav-content>

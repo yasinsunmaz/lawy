@@ -1,1 +1,134 @@
-<p>pipes works!</p>
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1 class="title">Pipe Kullanımı</h1>
+        <p>Pipe lar ile verilerimizi dönüştürebiliriz.</p>
+        <p>Örnek için <b>components/pipes</b> dizinini inceleyebilirsiniz.</p>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: Pipe Kullanımı
+        </p>
+        <h4 class="example">Uygulamalar</h4>
+        <h5 class="title">Uppercase | Büyük Harfe Çevirme</h5>
+        <p>
+            UpperCasePipe: Verilen string değerin tamamının büyük harfle gösterilmesini sağlar.
+        </p>
+        <span class="example">Örnek:</span> {{ 'Harfleri büyüt' | uppercase}}
+        <br>
+        <input type="text" [(ngModel)]="lowerCaseValue" placeholder="Harfleri büyüt">
+        <p>
+            {{ lowerCaseValue | uppercase}}
+        </p>
+
+        <h5 class="title">LowerCasePipe | Küçük Harfe Çevirme</h5>
+        <p>
+            LowerCasePipe: Verilen string değerin tamamının küçük harfle gösterilmesini sağlar.
+        </p>
+        <span class="example">Örnek:</span> {{ 'Harfleri KÜÇÜLT' | lowercase}}
+        <br>
+        <input type="text" [(ngModel)]="upperCaseValue" placeholder="Harfleri küçült">
+        <p>
+            {{ upperCaseValue | lowercase}}
+        </p>
+
+        <h5 class="title">TitleCasePipe | Başlık Formatına Çevirme</h5>
+        <p>
+            TitleCasePipe: Verilen string değerin başlık formatı şeklinde gösterilmesini sağlar.
+        </p>
+        <span class="example">Örnek:</span> {{'angular pipe uygulaması | yasin sunmaz'| titlecase}}
+        <br>
+        <input type="text" [(ngModel)]="titleCaseValue" placeholder="Başlık formatına çevirme">
+        <p>
+            {{ titleCaseValue | titlecase}}
+        </p>
+
+        <h5 class="title">SlicePipe | Metin Bölme</h5>
+        <p>
+            SlicePipe: Verilen dizi veya string değerin, gönderilen parametrelere göre bölünmesini sağlar.
+        </p>
+        <span class="example">Örnek:</span> {{'yasinsunmaz'| slice:2:6}}
+        <br>
+        <input type="text" [(ngModel)]="sliceCaseValue" placeholder="Metin bölme">
+        <p>
+            {{sliceCaseValue | slice:2:6}}
+        </p>
+
+        <h5 class="title">CurrencyPipe | Para Birimi</h5>
+        <p>
+            CurrencyPipe: Verilen sayı değerinin para birimi olarak gösterilmesini sağlar.
+        </p>
+        <p>
+            {{7.569 | currency}}
+        </p>
+        <p>
+            {{7.569 | currency:'CAD'}}
+        </p>
+
+
+        <h5 class="title">PercentPipe | Yüzde Biçimi Gösterme</h5>
+        <p>
+            PercentPipe: Verilen sayı değerinin yüzde biçiminde gösterilmesini sağlar.
+        </p>
+        <p>
+            {{0.259| percent}}
+        </p>
+
+        <h5 class="title">DecimalPipe | Ondalıklı Gösterme</h5>
+        <p>
+            DecimalPipe: Verilen sayı değerinin ondalıklı gösterilmesini sağlar.
+        </p>
+        <p>
+            {{6.256341| number}}
+        </p>
+
+        <h5 class="title">KeyValuePipe | ngFor Döngüsü</h5>
+        <p>
+            KeyValuePipe: Object veya Maplerin ngFor ile dönülmesini sağlar.
+        </p>
+        <span class="example">Örnek 1</span>
+        <p *ngFor="let country of countryList | keyvalue">
+            {{country.value}}
+        </p>
+        <span class="example">Örnek 2</span>
+        <ul>
+            <li *ngFor="let item of mapObj | keyvalue">
+                {{item.key}} ---> {{item.value}}</li>
+        </ul>
+        <p>Keyvalue için sıralama yaparak verilerin daha düzgün görülmesini sağlayabiliriz.</p>
+        <ul>
+            <li *ngFor="let item of data | keyvalue : orderData ">
+                {{item.key}} ---> {{item.value}}</li>
+        </ul>
+
+        <h5 class="title">DatePipe | Tarih Gösterme</h5>
+        <p>
+            DatePipe: Verilen tarih değerin, gönderilen parametrelere göre gösterilmesini sağlar.
+        </p>
+        <p>
+            {{1610301383709 | date:'hh:mm'}}
+        </p>
+        <p>
+            DatePipe: Verilen tarih değerin, gönderilen parametrelere göre gösterilmesini sağlar. Diğer kullanım
+            şekilleri.
+        </p>
+        <p>
+            Saat:
+            {{ nowDate | date:'hh:mm'}}
+            <br>
+            Gün, Ay ve Yıl için:
+            {{ nowDate| date:'d.M.y'}}
+            <br>
+            Sözel Gün için(Örneğin Çarşamba):
+            {{ nowDate| date:'EEEE'}}
+            <br>
+            Yılın kaçıncı haftası olduğunu öğrenmek için:
+            {{ nowDate| date:'w'}}
+        </p>
+
+        <h5 class="title">JsonPipe</h5>
+        <p>Nesnemizi json tipinde ekranda gösterebiliriz.</p>
+        <span class="example">Orijinal Ekran Çıktısı:</span>
+        <p>{{ myObject }}</p>
+        <span class="example">Pipe'lı Ekran Çıktısı</span>
+        <p>{{ myObject | json}}</p>
+    </div>
+</mat-sidenav-content>

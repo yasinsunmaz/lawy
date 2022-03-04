@@ -93,10 +93,24 @@
                 <button mat-menu-item routerLink="structural-directive">Structural Directive</button>
                 <button mat-menu-item routerLink="attribute-directive">Attirubute Directive</button>
             </mat-menu>
+            <button mat-button [matMenuTriggerFor]="pipes" routerLink="pipes" class="menu-button">
+                <mat-icon>bookmark</mat-icon>
+                <span>Pipe Kullanımı</span>
+            </button>
+            <mat-menu #pipes="matMenu">
+                <button mat-menu-item routerLink="basic-filter-pipe">Basic Filter Pipe</button>
+                <button mat-menu-item routerLink="custom-pipe">Custom Pipe</button>
+            </mat-menu>
+            <button mat-button routerLink="animations" class="menu-button">
+                <mat-icon>bookmark</mat-icon>
+                <span>Animasyon Kullanımı</span>
+            </button>
         </mat-sidenav>
         <mat-sidenav-content>
             <div class="content mat-elevation-z8">
-                <router-outlet></router-outlet>
+                <div class="content" role="main">
+                    <router-outlet></router-outlet>
+                </div>
             </div>
         </mat-sidenav-content>
     </mat-sidenav-container>

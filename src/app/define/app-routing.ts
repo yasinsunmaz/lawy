@@ -1,6 +1,9 @@
 import { Routes } from "@angular/router";
+import { AboutLawyComponent } from "../components/about-lawy/about-lawy.component";
+import { AnimationsComponent } from "../components/animations/animations.component";
 import { AttributeDirectiveComponent } from "../components/attribute-directive/attribute-directive.component";
 import { ConstructorComponent } from "../components/constructor/constructor.component";
+import { ContactComponent } from "../components/contact/contact.component";
 import { CustomDirectiveComponent } from "../components/custom-directive/custom-directive.component";
 import { DirectivesComponent } from "../components/directives/directives.component";
 import { EventBindingComponent } from "../components/event-binding/event-binding.component";
@@ -9,6 +12,7 @@ import { IntefaceComponent } from "../components/inteface/inteface.component";
 import { NotFoundComponent } from "../components/not-found/not-found.component";
 import { OneDataBindingComponent } from "../components/one-data-binding/one-data-binding.component";
 import { PageNotFoundComponent } from "../components/page-not-found/page-not-found.component";
+import { PipesComponent } from "../components/pipes/pipes.component";
 import { PropertyBindingComponent } from "../components/property-binding/property-binding.component";
 import { StringInterpolationComponent } from "../components/string-interpolation/string-interpolation.component";
 import { StructuralDirectiveComponent } from "../components/structural-directive/structural-directive.component";
@@ -30,6 +34,10 @@ export const AppRoutes: Routes = [
   { path: 'custom-directive', component: CustomDirectiveComponent },
   { path: 'structural-directive', component: StructuralDirectiveComponent },
   { path: 'attribute-directive', component: AttributeDirectiveComponent },
+  { path: 'animations', component: AnimationsComponent },
+  { path: 'pipes', component: PipesComponent },
+  { path: 'about-lawy', component: AboutLawyComponent },
+  { path: 'contact', component: ContactComponent },
   // { path: 'about', component: AboutComponent },
   // { path: 'users', component: UsersComponent },
   // //TODO Url parametre verme
