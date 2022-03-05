@@ -2,13 +2,16 @@ import { Routes } from "@angular/router";
 import { AboutLawyComponent } from "../components/about-lawy/about-lawy.component";
 import { AnimationsComponent } from "../components/animations/animations.component";
 import { AttributeDirectiveComponent } from "../components/attribute-directive/attribute-directive.component";
+import { BasicFilterPipeComponent } from "../components/basic-filter-pipe/basic-filter-pipe.component";
 import { ConstructorComponent } from "../components/constructor/constructor.component";
 import { ContactComponent } from "../components/contact/contact.component";
 import { CustomDirectiveComponent } from "../components/custom-directive/custom-directive.component";
+import { CustomPipeComponent } from "../components/custom-pipe/custom-pipe.component";
 import { DirectivesComponent } from "../components/directives/directives.component";
 import { EventBindingComponent } from "../components/event-binding/event-binding.component";
 import { FirebaseComponent } from "../components/firebase/firebase.component";
 import { IntefaceComponent } from "../components/inteface/inteface.component";
+import { LazyloadImageComponent } from "../components/lazyload-image/lazyload-image.component";
 import { NotFoundComponent } from "../components/not-found/not-found.component";
 import { OneDataBindingComponent } from "../components/one-data-binding/one-data-binding.component";
 import { PageNotFoundComponent } from "../components/page-not-found/page-not-found.component";
@@ -36,6 +39,9 @@ export const AppRoutes: Routes = [
   { path: 'attribute-directive', component: AttributeDirectiveComponent },
   { path: 'animations', component: AnimationsComponent },
   { path: 'pipes', component: PipesComponent },
+  { path: 'basic-filter-pipe', component: BasicFilterPipeComponent },
+  { path: 'custom-pipe', component: CustomPipeComponent },
+  { path: 'lazyload-image', component: LazyloadImageComponent },
   { path: 'about-lawy', component: AboutLawyComponent },
   { path: 'contact', component: ContactComponent },
   // { path: 'about', component: AboutComponent },

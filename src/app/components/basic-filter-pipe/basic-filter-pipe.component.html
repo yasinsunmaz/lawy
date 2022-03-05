@@ -1,0 +1,45 @@
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1 class="title">Basic Filter Pipe Kullanımı</h1>
+        <p>Filtereleme ve kullanıcılar içinde arama yaparak filtreme işlmelerini pipe yardımı ile uygulamasını inceleyebilirsiniz.</p>
+        <p>Örnek için <b>components/basic-filter-pipe</b> dizinini inceleyebilirsiniz.</p>
+        <p>Aşağıdaki paketi projenize dahil ederek kullanabilirsiniz.</p>
+        <div class="terminal">
+            <pre><code> npm g p basic-filter-pipe </code></pre>
+        </div>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: Basic Filter Pipe Kullanımı
+        </p>
+        <h4 class="example">Uygulamalar</h4>
+        <div class="container">
+            <label for="gender-select" class="form-label">Gender</label>
+            <select [(ngModel)]="selectedGender" class="form-select" id="gender-select"
+                aria-label="Default select example">
+                <option value="h">Hepsi</option>
+                <option value="e">Erkek</option>
+                <option value="k">Kadın</option>
+                <option value="b">Belirtilmemiş</option>
+            </select>
+            <div class="row mt-2 fw-bold">
+                <div class="col">Username</div>
+                <div class="col">Age</div>
+                <div class="col">Gender</div>
+            </div>
+            <div class="row mt-2" *ngFor="let user of users  | filterPipe : selectedGender;"
+                [class]="{'bg-danger': user.gender=='Belirtilmemiş', 'bg-success':user.gender=='Kadın', 'bg-primary':user.gender=='Erkek'}">
+                <div class="col">{{user.name}}</div>
+                <div class="col">{{user.age}}</div>
+                <div class="col">{{user.gender}}</div>
+            </div>
+            <hr>
+            <div class="row">
+                <h1 class="title">Kullanıcı Listesinde Arama Yap</h1>
+                <input type="text" id="filterText" [(ngModel)]="filterText" class="form-control mb-2" mdbInput>
+                <ul>
+                    <li *ngFor="let user of userList | filterSearch:filterText">{{user.username}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</mat-sidenav-content>

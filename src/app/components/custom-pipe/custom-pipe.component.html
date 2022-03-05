@@ -1,0 +1,18 @@
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1 class="title">Ad ve Soyadların Baş Harflerini Getirir</h1>
+        <p>Ad ve soyadın sadece baş harfleri kısaltarak geriye döndürür.</p>
+        <p>Örnek için <b>components/custom-pipe</b> dizinini inceleyebilirsiniz.</p>
+        <p>Aşağıdaki paketi projenize dahil ederek kullanabilirsiniz.</p>
+        <div class="terminal">
+            <pre><code> npm g p custom-pipe </code></pre>
+        </div>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: Custom Pipe Kullanımı
+        </p>
+        <h4 class="example">Uygulamalar</h4>
+        <input type="text" id="text" [(ngModel)]="text" class="form-control mb-2" mdbInput>
+        <p>{{ text | letterAbbreviation }}</p>
+    </div>
+</mat-sidenav-content>

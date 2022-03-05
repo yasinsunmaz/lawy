@@ -73,6 +73,10 @@ import { AboutLawyComponent } from './components/about-lawy/about-lawy.component
 import { ContactComponent } from './components/contact/contact.component';
 import { FilterSearchPipe } from './pipes/filter-search.pipe';
 import { BasicPipe } from './pipes/basic.pipe';
+import { BasicFilterPipeComponent } from './components/basic-filter-pipe/basic-filter-pipe.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.component';
+import { LetterAbbreviationPipe } from './pipes/letter-abbreviation.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -121,7 +125,11 @@ import { BasicPipe } from './pipes/basic.pipe';
     AboutLawyComponent,
     ContactComponent,
     FilterSearchPipe,
-    BasicPipe
+    BasicPipe,
+    BasicFilterPipeComponent,
+    FilterPipe,
+    CustomPipeComponent,
+    LetterAbbreviationPipe
   ],
   imports: [
     BrowserModule,

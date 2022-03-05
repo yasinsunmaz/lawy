@@ -1,1 +1,30 @@
-<p>lazyload-image works!</p>
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1 class="title">Lazyload Image Kullanımı</h1>
+        <p>Sayfadaki görsellerin sırası ile aşağı doğru indikçe yüklenmesini sağlar. Böylece performans anlamında büyük
+            bir tasarruf sağlar.</p>
+        <p>Örnek için <b>components/lazyload-image</b> dizinini inceleyebilirsiniz.</p>
+        <p>Aşağıdaki paketi projenize dahil ederek kullanabilirsiniz.</p>
+        <div class="terminal">
+            <pre><code> npm i ng-lazyload-image </code></pre>
+        </div>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: Lazyload Image Kullanımı
+        </p>
+        <h4 class="example">Uygulamalar</h4>
+        <p>
+            Aşağıya doğru indikçe görseller yüklenmeye başlayacak.
+        </p>
+        <div>
+            <img height="700" width="700" [lazyLoad]="image1">
+            <img height="700" width="700" [lazyLoad]="image2">
+            <img height="700" width="700" [lazyLoad]="image3">
+            <img height="700" width="700" [lazyLoad]="image4">
+        </div>
+        <div>
+            <h2>Varsayılan Görsel</h2>
+            <img [defaultImage]="defaultImage" [useSrcset]="true" [lazyLoad]="defaultImage">
+        </div>
+    </div>
+</mat-sidenav-content>

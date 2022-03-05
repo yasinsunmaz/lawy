@@ -5,7 +5,8 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    //TODO Model eklerken hata alma durumunda bu kod ile hatadan kurtulabiliriz.
+    "strict": false,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -21,7 +22,10 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    //TODO Model eklerken hata alma durumunda bu kod ile hatadan kurtulabiliriz.
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
