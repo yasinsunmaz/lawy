@@ -1,1 +1,22 @@
-<p>filter works!</p>
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1 class="title">Filter Kullanımı</h1>
+        <p>Gelen veri üzerinden istediğiniz alanda filtreme yaparak veriyi sınırlandırma işlemleri için kullanılır.</p>
+        <p>Örnek için <b>components/filter</b> dizinini inceleyebilirsiniz.</p>
+        <div class="terminal">
+            <pre><code>this.users.filter(p => p.gender == 'Erkek')</code></pre>
+        </div>
+        <h4 class="example">Uygulamalar</h4>
+        <span class="example">Örnek 1</span>
+        <p *ngFor="let item of getUserModelData()">
+            <span>{{item.name}} </span>
+            <span>{{item.gender}} </span>
+            <span>{{item.age}}</span>
+        </p>
+        <span class="example">Örnek 2</span>
+        <p *ngFor="let user of userList">
+            <span>{{user.id}} </span>
+            <span>{{user.username}}</span>
+        </p>
+    </div>
+</mat-sidenav-content>

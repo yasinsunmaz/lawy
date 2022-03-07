@@ -49,6 +49,11 @@
                 <mat-icon>home</mat-icon>
                 <span>Anasayfa</span>
             </button>
+            <button mat-button routerLink="component" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                class="menu-button">
+                <mat-icon>bookmark</mat-icon>
+                <span>Component Kullanımı</span>
+            </button>
             <button mat-button routerLink="interface" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
                 class="menu-button">
                 <mat-icon>bookmark</mat-icon>
@@ -98,6 +103,11 @@
                 <button mat-menu-item routerLink="structural-directive">Structural Directive</button>
                 <button mat-menu-item routerLink="attribute-directive">Attirubute Directive</button>
             </mat-menu>
+            <button mat-button routerLink="filter" [routerLinkActiveOptions]="{exact:true}"
+                routerLinkActive="active" class="menu-button">
+                <mat-icon>bookmark</mat-icon>
+                <span>Filter Kullanımı</span>
+            </button>
             <button mat-button [matMenuTriggerFor]="pipes" routerLink="pipes" class="menu-button">
                 <mat-icon>bookmark</mat-icon>
                 <span>Pipe Kullanımı</span>

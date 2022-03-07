@@ -3,6 +3,7 @@ import { AboutLawyComponent } from "../components/about-lawy/about-lawy.componen
 import { AnimationsComponent } from "../components/animations/animations.component";
 import { AttributeDirectiveComponent } from "../components/attribute-directive/attribute-directive.component";
 import { BasicFilterPipeComponent } from "../components/basic-filter-pipe/basic-filter-pipe.component";
+import { ComponentComponent } from "../components/component/component.component";
 import { ConstructorComponent } from "../components/constructor/constructor.component";
 import { ContactComponent } from "../components/contact/contact.component";
 import { CustomDirectiveComponent } from "../components/custom-directive/custom-directive.component";
@@ -10,6 +11,7 @@ import { CustomPipeComponent } from "../components/custom-pipe/custom-pipe.compo
 import { DirectivesComponent } from "../components/directives/directives.component";
 import { EnumComponent } from "../components/enum/enum.component";
 import { EventBindingComponent } from "../components/event-binding/event-binding.component";
+import { FilterComponent } from "../components/filter/filter.component";
 import { FirebaseComponent } from "../components/firebase/firebase.component";
 import { IntefaceComponent } from "../components/inteface/inteface.component";
 import { LazyloadImageComponent } from "../components/lazyload-image/lazyload-image.component";
@@ -32,6 +34,7 @@ export const AppRoutes: Routes = [
   { path: 'string-interpolation', component: StringInterpolationComponent },
   { path: 'property-binding', component: PropertyBindingComponent },
   { path: 'event-binding', component: EventBindingComponent },
+  { path: 'component', component: ComponentComponent },
   { path: 'interface', component: IntefaceComponent },
   { path: 'enums', component: EnumComponent },
   { path: 'constructor', component: ConstructorComponent },
@@ -39,6 +42,7 @@ export const AppRoutes: Routes = [
   { path: 'custom-directive', component: CustomDirectiveComponent },
   { path: 'structural-directive', component: StructuralDirectiveComponent },
   { path: 'attribute-directive', component: AttributeDirectiveComponent },
+  { path: 'filter', component: FilterComponent },
   { path: 'animations', component: AnimationsComponent },
   { path: 'pipes', component: PipesComponent },
   { path: 'basic-filter-pipe', component: BasicFilterPipeComponent },
