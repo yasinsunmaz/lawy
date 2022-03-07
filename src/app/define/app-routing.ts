@@ -8,6 +8,7 @@ import { ContactComponent } from "../components/contact/contact.component";
 import { CustomDirectiveComponent } from "../components/custom-directive/custom-directive.component";
 import { CustomPipeComponent } from "../components/custom-pipe/custom-pipe.component";
 import { DirectivesComponent } from "../components/directives/directives.component";
+import { EnumComponent } from "../components/enum/enum.component";
 import { EventBindingComponent } from "../components/event-binding/event-binding.component";
 import { FirebaseComponent } from "../components/firebase/firebase.component";
 import { IntefaceComponent } from "../components/inteface/inteface.component";
@@ -32,6 +33,7 @@ export const AppRoutes: Routes = [
   { path: 'property-binding', component: PropertyBindingComponent },
   { path: 'event-binding', component: EventBindingComponent },
   { path: 'interface', component: IntefaceComponent },
+  { path: 'enums', component: EnumComponent },
   { path: 'constructor', component: ConstructorComponent },
   { path: 'directives', component: DirectivesComponent },
   { path: 'custom-directive', component: CustomDirectiveComponent },

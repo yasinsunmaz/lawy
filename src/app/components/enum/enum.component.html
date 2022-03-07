@@ -1,0 +1,17 @@
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1 class="title">Enum Kullanımı</h1>
+        <p>Enum tanımlamalar sabit değerler için kullanılabilir.</p>
+        <p>Örnek için <b>components/enum</b> dizinini inceleyebilirsiniz.</p>
+        <div class="terminal">
+            <pre><code>{{"export enum EnumModel {firstName = 'Yasin', lastName = 'SUNMAZ', website = 'yasinsunmaz.com'}"}}</code></pre>
+        </div>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: Enum Kullanımı
+        </p>
+        <h4 class="example">Uygulamalar</h4>
+        <p><b>Adı Soyadı:</b> {{firstName +" "+lastName}}</p>
+        <p><b>Website:</b> <a [href]="website" target="_blank">{{website}}</a></p>
+    </div>
+</mat-sidenav-content>

@@ -77,6 +77,7 @@ import { BasicFilterPipeComponent } from './components/basic-filter-pipe/basic-f
 import { FilterPipe } from './pipes/filter.pipe';
 import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.component';
 import { LetterAbbreviationPipe } from './pipes/letter-abbreviation.pipe';
+import { EnumComponent } from './components/enum/enum.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -129,7 +130,8 @@ import { LetterAbbreviationPipe } from './pipes/letter-abbreviation.pipe';
     BasicFilterPipeComponent,
     FilterPipe,
     CustomPipeComponent,
-    LetterAbbreviationPipe
+    LetterAbbreviationPipe,
+    EnumComponent
   ],
   imports: [
     BrowserModule,
