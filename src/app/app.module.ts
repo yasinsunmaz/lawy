@@ -79,6 +79,7 @@ import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.compon
 import { LetterAbbreviationPipe } from './pipes/letter-abbreviation.pipe';
 import { EnumComponent } from './components/enum/enum.component';
 import { ComponentComponent } from './components/component/component.component';
+import { NotificationComponent } from './components/notification/notification.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -133,7 +134,8 @@ import { ComponentComponent } from './components/component/component.component';
     CustomPipeComponent,
     LetterAbbreviationPipe,
     EnumComponent,
-    ComponentComponent
+    ComponentComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,

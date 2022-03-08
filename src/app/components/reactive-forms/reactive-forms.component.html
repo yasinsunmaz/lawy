@@ -1,1 +1,87 @@
-<p>reactive-forms works!</p>
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1 class="title">ReactiveForms Kullanımı</h1>
+        <p>Dinamik kontrollü form.</p>
+        <p>Örnek için <b>components/reactive-forms</b> dizinini inceleyebilirsiniz.</p>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: ReactiveForms Kullanımı
+        </p>
+        <h4 class="example">Uygulamalar</h4>
+            <div class="col-md-4">
+                <form [formGroup]="userForm">
+                    <div class="md-form">
+                        <div class="md-form">
+                            <input type="text" id="name" formControlName="name" class="form-control mb-2" mdbInput>
+                            <label for="name">Adı</label>
+                            <small *ngIf="name && name.invalid && (name.dirty || name.touched)" class="text-danger">Ad
+                                alanı
+                                gereklidir</small>
+                        </div>
+                        <div class="md-form">
+                            <input type="text" id="surname" formControlName="surname" class="form-control mb-2"
+                                mdbInput>
+                            <label for="surname">Soyadı</label>
+                            <small *ngIf="surname && surname.invalid && (surname.dirty || surname.touched)"
+                                class="text-danger">Soyadı alanı gereklidir</small>
+                        </div>
+                        <div class="md-form">
+                            <select name="gender" id="gender" formControlName="gender" class="form-control mb-2"
+                                mdbInput>
+                                <option value="" selected>Seçiniz</option>
+                                <option *ngFor="let g of genderEnums()" value={{g}}>{{g}}</option>
+                            </select>
+                            <label for="gender">Cinsiyet</label>
+                            <small *ngIf="gender && gender.invalid && (gender.dirty || gender.touched)"
+                                class="text-danger">Cinsiyet alanı gereklidir</small>
+                        </div>
+                        <div class="md-form">
+                            <input type="date" id="dateOfBirth" formControlName="dateOfBirth" class="form-control mb-2"
+                                mdbInput>
+                            <label for="dateOfBirth">Doğum Tarihi</label>
+                            <small
+                                *ngIf="dateOfBirth && dateOfBirth.invalid && (dateOfBirth.dirty || dateOfBirth.touched)"
+                                class="text-danger">Doğum tarihi alanı gereklidir</small>
+                        </div>
+                        <div class="md-form">
+                            <input type="tel" id="phone" formControlName="phone" class="form-control mb-2" mdbInput>
+                            <label for="phone">Telefon</label>
+                            <small *ngIf="phone && phone.invalid && (phone.dirty || phone.touched)"
+                                class="text-danger">Telefon
+                                alanı gereklidir</small>
+                        </div>
+                        <div class="md-form">
+                            <input type="email" id="email" formControlName="email" class="form-control mb-2" mdbInput>
+                            <label for="email">E-posta</label>
+                            <small *ngIf="email && email.invalid && (email.dirty || email.touched)"
+                                class="text-danger">E-posta
+                                alanı gereklidir</small>
+                        </div>
+                        <div class="md-form">
+                            <input type="password" id="password" formControlName="password" class="form-control mb-2"
+                                mdbInput>
+                            <label for="password">Parola</label>
+                            <small *ngIf="password && password.invalid && (password.dirty || password.touched)"
+                                class="text-danger">Parola alanı gereklidir</small>
+                            <small
+                                *ngIf="password.valid && passwordConfirm.valid && passwordConfirm.value!=password.value"
+                                class="text-danger">Parolalar eşleşmiyor</small>
+                        </div>
+                        <div class="md-form">
+                            <input type="password" id="passwordConfirm" formControlName="passwordConfirm"
+                                class="form-control mb-2" mdbInput>
+                            <label for="passwordConfirm">Parola Tekrar</label>
+                            <small
+                                *ngIf="passwordConfirm && passwordConfirm.invalid && (passwordConfirm.dirty || passwordConfirm.touched)"
+                                class="text-danger">Parola tekar alanı gereklidir</small>
+                            <small *ngIf="passwordConfirm.valid && passwordConfirm.value!=password.value"
+                                class="text-danger">Parolalar eşleşmiyor</small>
+                        </div>
+                    </div>
+                    <button mdbBtn color="default" class="waves-effect" mdbWavesEffect type="submit"
+                        [disabled]="!userForm.valid" (click)="onCreateUser()">Kaydet</button>
+                </form>
+        </div>
+        <simple-notifications></simple-notifications>
+    </div>
+</mat-sidenav-content>

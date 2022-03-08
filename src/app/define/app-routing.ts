@@ -16,10 +16,12 @@ import { FirebaseComponent } from "../components/firebase/firebase.component";
 import { IntefaceComponent } from "../components/inteface/inteface.component";
 import { LazyloadImageComponent } from "../components/lazyload-image/lazyload-image.component";
 import { NotFoundComponent } from "../components/not-found/not-found.component";
+import { NotificationComponent } from "../components/notification/notification.component";
 import { OneDataBindingComponent } from "../components/one-data-binding/one-data-binding.component";
 import { PageNotFoundComponent } from "../components/page-not-found/page-not-found.component";
 import { PipesComponent } from "../components/pipes/pipes.component";
 import { PropertyBindingComponent } from "../components/property-binding/property-binding.component";
+import { ReactiveFormsComponent } from "../components/reactive-forms/reactive-forms.component";
 import { StringInterpolationComponent } from "../components/string-interpolation/string-interpolation.component";
 import { StructuralDirectiveComponent } from "../components/structural-directive/structural-directive.component";
 import { TemplateReferenceVariableComponent } from "../components/template-reference-variable/template-reference-variable.component";
@@ -48,6 +50,8 @@ export const AppRoutes: Routes = [
   { path: 'basic-filter-pipe', component: BasicFilterPipeComponent },
   { path: 'custom-pipe', component: CustomPipeComponent },
   { path: 'lazyload-image', component: LazyloadImageComponent },
+  { path: 'notifications', component: NotificationComponent },
+  { path: 'reactive-forms', component: ReactiveFormsComponent },
   { path: 'about-lawy', component: AboutLawyComponent },
   { path: 'contact', component: ContactComponent },
   // { path: 'about', component: AboutComponent },
