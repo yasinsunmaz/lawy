@@ -80,6 +80,9 @@ import { LetterAbbreviationPipe } from './pipes/letter-abbreviation.pipe';
 import { EnumComponent } from './components/enum/enum.component';
 import { ComponentComponent } from './components/component/component.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { ValidatorComponent } from './components/validator/validator.component';
+import { ServiceComponent } from './components/service/service.component';
+import { ModelOrientedSetvalueFunctionComponent } from './components/model-oriented-setvalue-function/model-oriented-setvalue-function.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -135,7 +138,10 @@ import { NotificationComponent } from './components/notification/notification.co
     LetterAbbreviationPipe,
     EnumComponent,
     ComponentComponent,
-    NotificationComponent
+    NotificationComponent,
+    ValidatorComponent,
+    ServiceComponent,
+    ModelOrientedSetvalueFunctionComponent
   ],
   imports: [
     BrowserModule,

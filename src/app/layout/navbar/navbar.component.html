@@ -54,10 +54,20 @@
                 <mat-icon>bookmark</mat-icon>
                 <span>Component Kullanımı</span>
             </button>
+            <button mat-button routerLink="service" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                class="menu-button">
+                <mat-icon>bookmark</mat-icon>
+                <span>Service Kullanımı</span>
+            </button>
             <button mat-button routerLink="interface" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
                 class="menu-button">
                 <mat-icon>bookmark</mat-icon>
                 <span>Interface Kullanımı</span>
+            </button>
+            <button mat-button routerLink="model-oriented-setvalue-function" [routerLinkActiveOptions]="{exact:true}"
+                routerLinkActive="active" class="menu-button">
+                <mat-icon>bookmark</mat-icon>
+                <span>SetValue Kullanımı</span>
             </button>
             <button mat-button routerLink="enums" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
                 class="menu-button">
@@ -103,8 +113,8 @@
                 <button mat-menu-item routerLink="structural-directive">Structural Directive</button>
                 <button mat-menu-item routerLink="attribute-directive">Attirubute Directive</button>
             </mat-menu>
-            <button mat-button routerLink="filter" [routerLinkActiveOptions]="{exact:true}"
-                routerLinkActive="active" class="menu-button">
+            <button mat-button routerLink="filter" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                class="menu-button">
                 <mat-icon>bookmark</mat-icon>
                 <span>Filter Kullanımı</span>
             </button>
@@ -132,7 +142,18 @@
                 <mat-icon>bookmark</mat-icon>
                 <span>ReactiveForms Kullanımı</span>
             </button>
-            
+            <button mat-button routerLink="validator" class="menu-button">
+                <mat-icon>bookmark</mat-icon>
+                <span>Validator Kullanımı</span>
+            </button>
+            <button mat-button routerLink="local-storage" class="menu-button">
+                <mat-icon>bookmark</mat-icon>
+                <span>Local Storage Kullanımı</span>
+            </button>
+            <button mat-button routerLink="qr-code" class="menu-button">
+                <mat-icon>bookmark</mat-icon>
+                <span>QRCode Kullanımı</span>
+            </button>
         </mat-sidenav>
         <mat-sidenav-content>
             <div class="content mat-elevation-z8">

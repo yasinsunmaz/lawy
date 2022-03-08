@@ -1,0 +1,107 @@
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1 class="title">Validator Kullanımı</h1>
+        <p>Form işlemlerinde kısıtlamalar ve kurallar belirlemye yarar. Böylece daha doğru veriler üzerinden işlem
+            yapmamıza olanak sağlar.</p>
+        <p>Örnek için <b>components/validator</b> dizinini inceleyebilirsiniz.</p>
+        <p>Validation kullanmak için aşağıdaki paketleri componentte çağırmamız gereklidir.</p>
+        <div class="terminal">
+            <pre><code>FormBuilder, FormControl, FormGroup, Validators</code></pre>
+        </div>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: Validator Kullanımı
+        </p>
+        <h4>Validators</h4>
+        <p><b>Validators.required:</b> Zorunlu, boş geçilemez</p>
+        <p><b>Validators.minLength(3):</b> En az 3 karakterli olmalı</p>
+        <p><b>Validators.maxLenght(50):</b> En fazla 50 karakterli olmalı</p>
+        <p><b>Validators.pattern(''):</b> İçerisine istenilen kural tanımlanır</p>
+        <p><b>Validators.email:</b> Email formatı kontrolü</p>
+        <p><b>Validators.min(10):</b> En az 10 olmalıdır</p>
+        <p><b>Validators.max(20):</b> En fazla 20 olmalıdır</p>
+        <h4 class="example">Uygulamalar</h4>
+        <div class="col-md-4">
+            <form [formGroup]="userForm">
+                <div class="md-form">
+                    <div class="md-form">
+                        <input type="text" id="name" formControlName="name" class="form-control mb-2" mdbInput>
+                        <label for="name">Adı</label>
+                        <small *ngIf="name && name.invalid && (name.dirty || name.touched)" class="text-danger">Ad
+                            alanı
+                            gereklidir</small>
+                    </div>
+                    <div class="md-form">
+                        <input type="text" id="surname" formControlName="surname" class="form-control mb-2" mdbInput>
+                        <label for="surname">Soyadı</label>
+                        <small *ngIf="surname && surname.invalid && (surname.dirty || surname.touched)"
+                            class="text-danger">Soyadı alanı gereklidir</small>
+                    </div>
+                    <div class="md-form">
+                        <select name="gender" id="gender" formControlName="gender" class="form-control mb-2" mdbInput>
+                            <option value="" selected>Seçiniz</option>
+                            <option *ngFor="let g of genderEnums()" value={{g}}>{{g}}</option>
+                        </select>
+                        <label for="gender">Cinsiyet</label>
+                        <small *ngIf="gender && gender.invalid && (gender.dirty || gender.touched)"
+                            class="text-danger">Cinsiyet alanı gereklidir</small>
+                    </div>
+                    <div class="md-form">
+                        <input type="date" id="dateOfBirth" formControlName="dateOfBirth" class="form-control mb-2"
+                            mdbInput>
+                        <label for="dateOfBirth">Doğum Tarihi</label>
+                        <small *ngIf="dateOfBirth && dateOfBirth.invalid && (dateOfBirth.dirty || dateOfBirth.touched)"
+                            class="text-danger">Doğum tarihi alanı gereklidir</small>
+                    </div>
+                    <div class="md-form">
+                        <input type="number" id="ageMin" formControlName="ageMin" class="form-control mb-2" mdbInput>
+                        <label for="ageMin">En Küçük Yaş</label>
+                        <small *ngIf="ageMin && ageMin.invalid && (ageMin.dirty || ageMin.touched)"
+                            class="text-danger">+10 yaş olmalıdır</small>
+                    </div>
+                    <div class="md-form">
+                        <input type="number" id="ageMax" formControlName="ageMax" class="form-control mb-2" mdbInput>
+                        <label for="ageMax">En Büyük Yaş</label>
+                        <small *ngIf="ageMax && ageMax.invalid && (ageMax.dirty || ageMax.touched)"
+                            class="text-danger">0-20 yaş olmalıdır</small>
+                    </div>
+                    <div class="md-form">
+                        <input type="tel" id="phone" formControlName="phone" class="form-control mb-2" mdbInput>
+                        <label for="phone">Telefon</label>
+                        <small *ngIf="phone && phone.invalid && (phone.dirty || phone.touched)"
+                            class="text-danger">Telefon
+                            alanı gereklidir</small>
+                    </div>
+                    <div class="md-form">
+                        <input type="email" id="email" formControlName="email" class="form-control mb-2" mdbInput>
+                        <label for="email">E-posta</label>
+                        <small *ngIf="email && email.invalid && (email.dirty || email.touched)"
+                            class="text-danger">E-posta
+                            alanı gereklidir</small>
+                    </div>
+                    <div class="md-form">
+                        <input type="password" id="password" formControlName="password" class="form-control mb-2"
+                            mdbInput>
+                        <label for="password">Parola</label>
+                        <small *ngIf="password && password.invalid && (password.dirty || password.touched)"
+                            class="text-danger">Parola alanı gereklidir</small>
+                        <small *ngIf="password.valid && passwordConfirm.valid && passwordConfirm.value!=password.value"
+                            class="text-danger">Parolalar eşleşmiyor</small>
+                    </div>
+                    <div class="md-form">
+                        <input type="password" id="passwordConfirm" formControlName="passwordConfirm"
+                            class="form-control mb-2" mdbInput>
+                        <label for="passwordConfirm">Parola Tekrar</label>
+                        <small
+                            *ngIf="passwordConfirm && passwordConfirm.invalid && (passwordConfirm.dirty || passwordConfirm.touched)"
+                            class="text-danger">Parola tekar alanı gereklidir</small>
+                        <small *ngIf="passwordConfirm.valid && passwordConfirm.value!=password.value"
+                            class="text-danger">Parolalar eşleşmiyor</small>
+                    </div>
+                </div>
+                <button mdbBtn color="default" class="waves-effect" mdbWavesEffect type="submit"
+                    [disabled]="!userForm.valid">Kaydet</button>
+            </form>
+        </div>
+    </div>
+</mat-sidenav-content>

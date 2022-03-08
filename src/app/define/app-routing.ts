@@ -15,17 +15,22 @@ import { FilterComponent } from "../components/filter/filter.component";
 import { FirebaseComponent } from "../components/firebase/firebase.component";
 import { IntefaceComponent } from "../components/inteface/inteface.component";
 import { LazyloadImageComponent } from "../components/lazyload-image/lazyload-image.component";
+import { LocalStorageComponent } from "../components/local-storage/local-storage.component";
+import { ModelOrientedSetvalueFunctionComponent } from "../components/model-oriented-setvalue-function/model-oriented-setvalue-function.component";
 import { NotFoundComponent } from "../components/not-found/not-found.component";
 import { NotificationComponent } from "../components/notification/notification.component";
 import { OneDataBindingComponent } from "../components/one-data-binding/one-data-binding.component";
 import { PageNotFoundComponent } from "../components/page-not-found/page-not-found.component";
 import { PipesComponent } from "../components/pipes/pipes.component";
 import { PropertyBindingComponent } from "../components/property-binding/property-binding.component";
+import { QrCodeComponent } from "../components/qr-code/qr-code.component";
 import { ReactiveFormsComponent } from "../components/reactive-forms/reactive-forms.component";
+import { ServiceComponent } from "../components/service/service.component";
 import { StringInterpolationComponent } from "../components/string-interpolation/string-interpolation.component";
 import { StructuralDirectiveComponent } from "../components/structural-directive/structural-directive.component";
 import { TemplateReferenceVariableComponent } from "../components/template-reference-variable/template-reference-variable.component";
 import { TwoDataBindingComponent } from "../components/two-data-binding/two-data-binding.component";
+import { ValidatorComponent } from "../components/validator/validator.component";
 import { HomeComponent } from "../layout/home/home.component";
 export const AppRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -37,7 +42,9 @@ export const AppRoutes: Routes = [
   { path: 'property-binding', component: PropertyBindingComponent },
   { path: 'event-binding', component: EventBindingComponent },
   { path: 'component', component: ComponentComponent },
+  { path: 'service', component: ServiceComponent },
   { path: 'interface', component: IntefaceComponent },
+  { path: 'model-oriented-setvalue-function', component: ModelOrientedSetvalueFunctionComponent },
   { path: 'enums', component: EnumComponent },
   { path: 'constructor', component: ConstructorComponent },
   { path: 'directives', component: DirectivesComponent },
@@ -52,6 +59,9 @@ export const AppRoutes: Routes = [
   { path: 'lazyload-image', component: LazyloadImageComponent },
   { path: 'notifications', component: NotificationComponent },
   { path: 'reactive-forms', component: ReactiveFormsComponent },
+  { path: 'validator', component: ValidatorComponent },
+  { path: 'local-storage', component: LocalStorageComponent },
+  { path: 'qr-code', component: QrCodeComponent },
   { path: 'about-lawy', component: AboutLawyComponent },
   { path: 'contact', component: ContactComponent },
   // { path: 'about', component: AboutComponent },

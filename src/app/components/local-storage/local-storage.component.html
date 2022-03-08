@@ -1,1 +1,91 @@
-<p>local-storage works!</p>
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1 class="title">Local Storage Kullanımı</h1>
+        <p>Tarayıcı üzerindeki depolama alanını kullanarak istediğimiz verileri tutamamızı yarayan depolama biçimidir.
+        </p>
+        <p>Örnek için <b>components/local-storage</b> dizinini inceleyebilirsiniz.</p>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: Local Storage Kullanımı
+        </p>
+        <h4 class="example">Uygulamalar</h4>
+        <div class="col-md-4">
+            <form #newTaskForm="ngForm" (ngSubmit)="newTaskFn()">
+                <div class="md-form">
+                    <h3>Form</h3>
+                    <div class="md-form">
+                        <input #title="ngModel" id="title" [(ngModel)]="newTask.title" class="form-control mb-2"
+                            mdbInput type="text" name="title" placeholder="Başlık" required>
+                        <label for="title">Başlık</label>
+                    </div>
+                    <div class="md-form">
+                        <label for="descripción">Açıklama</label>
+                        <input #descripción="ngModel" [(ngModel)]="newTask.description" class="form-control mb-2"
+                            mdbInput type="text" name="descripción" placeholder="Açıklama">
+                    </div>
+                    <div class="md-form">
+
+                        <input #date="ngModel" [(ngModel)]="dateString" class="form-control mb-2" mdbInput type="date"
+                            name="date">
+                        <label for="date">Tarih</label>
+                    </div>
+                    <div class="md-form">
+                        <label for="date">Zorunlu mu?</label>
+                        <input #checked="ngModel" [(ngModel)]="newTask.checked" type="checkbox" name="checked">
+                    </div>
+                    <div class="md-form">
+                        <h3>Etiket Listesi</h3>
+                        <div *ngFor="let item of newTask.list; let i = index; trackBy: trackByFn">
+                            <label for="item{{i}}">Etiket</label>
+                            <input class="form-control mb-2" mdbInput [(ngModel)]="newTask.list[i]" name="item{{i}}"
+                                type="text" placeholder="Etiket">
+                        </div>
+                        <button type="button" mdbBtn color="primary" class="waves-effect" mdbWavesEffect
+                            (click)="addItem()">Etiket Ekle</button>
+                    </div><br>
+                    <button type="submit" mdbBtn color="default" class="waves-effect" mdbWavesEffect>Kaydet</button>
+                </div>
+            </form>
+        </div>
+        <h2>Yazı Listesi</h2>
+        <div *ngFor="let task of collection; let i = index" class="col-md-12 mb-20">
+            <!--  Important Tasks  -->
+            <div *ngIf="task.checked" class="card">
+                <div class="card-body">
+                    <p><span class="bold">Başlık: </span>{{task.title}}</p>
+                    <p><span class="bold">Zorunlu mu: </span>
+                        <input [(ngModel)]="collection[i].checked" (ngModelChange)="updateCollection()" type="checkbox"
+                            name="check{{i}}">
+                        <span>(Yapılması gerek)</span>
+                    </p>
+                    <p><span class="bold">Tarih: </span>{{task.date | date: 'MMM d, y, h:mm a'}}</p>
+                    <p><span class="bold">Açıklama: </span>{{task.description}}</p>
+                    <p *ngIf="task.list!=null"><span class="bold">Etiketler:</span></p>
+                    <ul>
+                        <li *ngFor="let item of task.list">{{item}}</li>
+                    </ul>
+                    <button mdbBtn color="danger" class="waves-effect" mdbWavesEffect
+                        (click)="deleteTask(i)">SİL</button>
+                </div>
+            </div>
+            <!--  No Important Tasks  -->
+            <div *ngIf="!task.checked" class="card">
+                <div class="card-body">
+                    <p><span class="bold">Başlık: </span>{{task.title}}</p>
+                    <p><span class="bold">Zorunlu mu: </span>
+                        <input [(ngModel)]="collection[i].checked" (ngModelChange)="updateCollection()" type="checkbox"
+                            name="check{{i}}">
+                    </p>
+                    <p><span class="bold">Tarih: </span>{{task.date | date: 'MMM d, y, h:mm a'}}</p>
+                    <p><span class="bold">Açıklama: </span>{{task.description}}</p>
+                    <p *ngIf="task.list!=null"><span class="bold">Etiketler:</span></p>
+                    <ul>
+                        <li *ngFor="let item of task.list">{{item}}</li>
+                    </ul>
+                    <button mdbBtn color="danger" class="waves-effect" mdbWavesEffect
+                        (click)="deleteTask(i)">SİL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-sidenav-content>
