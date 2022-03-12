@@ -1,13 +1,42 @@
 <mat-sidenav-content>
     <div class="content mat-elevation-z8">
         <h1 class="title">Structural Directive Kullanımı</h1>
-        <p>
-        </p>
+        <p>Structure Directive ‘ler DOM nesnesinin yapısını manipule etmek ve değiştirmek için kullanılır. “*” işareti
+            ile başlarlar.</p>
         <p>Örnek için <b>components/structural-directive</b> dizinini inceleyebilirsiniz.</p>
         <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
         <p class="todo-name">
             <mat-icon>chevron_right</mat-icon>TODO: Structural Directive Kullanımı
         </p>
         <h4 class="example">Uygulamalar</h4>
+        <h4>ngIf Kullanımı</h4>
+        <p>DOM elementlerini eklemeye silmeye izin verir.</p>
+        <p *ngIf="condition" class="unless a">
+            True değeri aktif.
+        </p>
+        <p *ngIf="!condition" class="unless b">
+            False değeri aktif.
+        </p>
+        <p>Sonuç:
+            <span *ngIf="ngIfStatus">Doğru</span>
+            <span *ngIf="!ngIfStatus">Yanlış</span>
+        </p>
+        <h4>ngFor Kullanımı</h4>
+        <p>*ngFor directive, bir list için HTML üzerinde yinelenebilir html parçaları eklemeye yarar.</p>
+        <div class="row mt-2" *ngFor="let user of users; let i=index">
+            <div class="col">{{i+1}}</div>
+            <div class="col">{{user.name}}</div>
+            <div class="col">{{user.age}}</div>
+            <div class="col">{{user.gender}}</div>
+        </div>
+        <h2>ngSwitch Kullanımı</h2>
+        <p>Bu directive de DOM elementlerini eklemeye silmeye izin verir. C# ve benzeri dillerdeki switch kullanımına
+            benzer.</p>
+        <div [ngSwitch]="3">
+            <p *ngSwitchCase="1">1 numaralı switch</p>
+            <p *ngSwitchCase="2">2 numaralı switch</p>
+            <p *ngSwitchCase="3">3 numaralı switch</p>
+            <p *ngSwitchDefault>Varsayılan</p>
+        </div>
     </div>
 </mat-sidenav-content>

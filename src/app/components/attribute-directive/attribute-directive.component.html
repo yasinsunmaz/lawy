@@ -1,13 +1,36 @@
 <mat-sidenav-content>
     <div class="content mat-elevation-z8">
         <h1 class="title">Attribute Directive Kullanımı</h1>
-        <p>
-        </p>
+        <p>Attribute Directive ‘ler DOM nesnesinin görünümünü ve davranışını değiştirmek için kullanılır.</p>
         <p>Örnek için <b>components/attribute-directive</b> dizinini inceleyebilirsiniz.</p>
         <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
         <p class="todo-name">
             <mat-icon>chevron_right</mat-icon>TODO: Attribute Directive Kullanımı
         </p>
         <h4 class="example">Uygulamalar</h4>
+        <h4>ngStyle Kullanımı</h4>
+        <p>Yaşı 25'ten büyük olan değerler yeşil renkte aksi durumda sarı renkli olmalıdır.</p>
+        <p></p>
+        <table>
+            <tr *ngFor="let user of users; let i=index">
+                <td>{{i+1}}</td>
+                <td>{{user.name}}</td>
+                <td [style.backgroundColor]="user.age>25 ? 'green' : 'yellow'">{{user.age}}</td>
+                <td [ngStyle]="{backgroundColor: 'red'}">{{user.gender}}</td>
+            </tr>
+        </table>
+        <h4>ngClass Kullanımı</h4>
+        <p>Condition değeri true. True ise ".b-style" sarı, değilse "a-style" yeşil renkli olmalıdır. Varsayılan renk
+            ise "unless" kırmızıdır.</p>
+        <p>
+            Mevcut Durum:
+            <span [ngClass]="{ 'a-style': !condition, 'b-style': condition, 'unless': true }">{{condition}}</span>.
+        </p>
+        <div class="col-md-12 p0">
+            <button (click)="condition = !condition" [ngClass]="{ 'a-style': condition, 'b-style': !condition }"
+                class="btn btn-success">
+                Durumu "{{condition ? 'false' : 'true'}}" Değiştir
+            </button>
+        </div>
     </div>
 </mat-sidenav-content>

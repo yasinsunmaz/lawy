@@ -1,0 +1,9 @@
+.unless{
+    color: red;
+}
+.unless.a-style{
+    color: green;
+}
+.unless.b-style{
+    color: yellow;
+}

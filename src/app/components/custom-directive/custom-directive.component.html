@@ -1,13 +1,22 @@
 <mat-sidenav-content>
     <div class="content mat-elevation-z8">
         <h1 class="title">Custom Directive Kullanımı</h1>
-        <p>
-        </p>
+        <p>İstediğim şekilde directive tanımlamalar yapabiliriz.</p>
         <p>Örnek için <b>components/custom-directive</b> dizinini inceleyebilirsiniz.</p>
+        <p>Aşağıdaki gibi directive ekleyebilirsiniz.</p>
+        <div class="terminal">
+            <pre><code> ng generate directive custom-directive </code></pre>
+        </div>
+        <h4>Kısa Kullanımı</h4>
+        <div class="terminal">
+            <pre><code> ng g d custom-directive </code></pre>
+        </div>
         <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
         <p class="todo-name">
             <mat-icon>chevron_right</mat-icon>TODO: Custom Directive Kullanımı
         </p>
         <h4 class="example">Uygulamalar</h4>
+        <p [appColor]="'green'">Yeşil renkli yazı</p>
+        <p [appColor]="'red'">Kırmızı renkli yazı</p>
     </div>
 </mat-sidenav-content>

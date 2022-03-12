@@ -1,0 +1,38 @@
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1 class="title">ng-template Kullanımı</h1>
+        <p>HTML elemanlarını belli koşula gösterme ve gizleme işlemleri yapabiliriz.</p>
+        <p>Örnek için <b>components/ng-template</b> dizinini inceleyebilirsiniz.</p>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: ng-template Kullanımı
+        </p>
+        <h4 class="example">Uygulamalar</h4>
+        <span class="example">Örnek 1</span>
+        <h5>Yeniden kullanılabilir HTML Blokları</h5>
+        <ng-template #testTemplate>
+            <p>HTML bloğu ve içeriği</p>
+        </ng-template>
+
+        <ng-container *ngTemplateOutlet="testTemplate"></ng-container>
+        <ng-container *ngTemplateOutlet="testTemplate"></ng-container>
+
+        <span class="example">Örnek 2</span>
+        <ng-template #testTemplate1 let-name="name">
+            <div>Benim adım {{name}}.</div>
+        </ng-template>
+
+        <ng-container *ngTemplateOutlet="testTemplate1; context: { name: 'Yasin' }"></ng-container>
+        <ng-container *ngTemplateOutlet="testTemplate1; context: { name: 'Tayfun' }"></ng-container>
+
+        <h5>ng-template</h5>
+        <p>Template seçmek için template1 veya template2 yazın.</p>
+        <input type="text" [(ngModel)]="templateSelect" placeholder="template1 veya template2 yazın">
+        <div *ngIf="templateSelect=='template1'; else template2">
+            <h2>Template 1</h2>
+        </div>
+        <ng-template #template2>
+            <h2>Template 2</h2>
+        </ng-template>
+    </div>
+</mat-sidenav-content>

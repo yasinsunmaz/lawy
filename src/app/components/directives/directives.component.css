@@ -1,0 +1,14 @@
+ul{
+    padding: 0;
+}
+ul li{
+    list-style: none;
+    color: blueviolet;
+    cursor: pointer;
+}
+ul li:hover{
+    color: red;
+}
+ul li mat-icon{
+    vertical-align: middle;
+}

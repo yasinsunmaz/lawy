@@ -83,6 +83,9 @@ import { NotificationComponent } from './components/notification/notification.co
 import { ValidatorComponent } from './components/validator/validator.component';
 import { ServiceComponent } from './components/service/service.component';
 import { ModelOrientedSetvalueFunctionComponent } from './components/model-oriented-setvalue-function/model-oriented-setvalue-function.component';
+import { OutputInputComponent } from './components/output-input/output-input.component';
+import { ColorDirective } from './directives/color.directive';
+import { NgTemplateComponent } from './components/ng-template/ng-template.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -141,7 +144,10 @@ import { ModelOrientedSetvalueFunctionComponent } from './components/model-orien
     NotificationComponent,
     ValidatorComponent,
     ServiceComponent,
-    ModelOrientedSetvalueFunctionComponent
+    ModelOrientedSetvalueFunctionComponent,
+    OutputInputComponent,
+    ColorDirective,
+    NgTemplateComponent
   ],
   imports: [
     BrowserModule,

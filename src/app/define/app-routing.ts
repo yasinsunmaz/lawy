@@ -17,6 +17,7 @@ import { IntefaceComponent } from "../components/inteface/inteface.component";
 import { LazyloadImageComponent } from "../components/lazyload-image/lazyload-image.component";
 import { LocalStorageComponent } from "../components/local-storage/local-storage.component";
 import { ModelOrientedSetvalueFunctionComponent } from "../components/model-oriented-setvalue-function/model-oriented-setvalue-function.component";
+import { NgTemplateComponent } from "../components/ng-template/ng-template.component";
 import { NotFoundComponent } from "../components/not-found/not-found.component";
 import { NotificationComponent } from "../components/notification/notification.component";
 import { OneDataBindingComponent } from "../components/one-data-binding/one-data-binding.component";
@@ -51,6 +52,7 @@ export const AppRoutes: Routes = [
   { path: 'custom-directive', component: CustomDirectiveComponent },
   { path: 'structural-directive', component: StructuralDirectiveComponent },
   { path: 'attribute-directive', component: AttributeDirectiveComponent },
+  { path: 'ng-template', component: NgTemplateComponent },
   { path: 'filter', component: FilterComponent },
   { path: 'animations', component: AnimationsComponent },
   { path: 'pipes', component: PipesComponent },

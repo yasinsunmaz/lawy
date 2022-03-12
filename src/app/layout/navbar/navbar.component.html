@@ -108,11 +108,16 @@
                 <mat-icon>bookmark</mat-icon>
                 <span>Directive Kullanımı</span>
             </button>
-            <mat-menu #directive="matMenu">
-                <button mat-menu-item routerLink="custom-directive">Custom Directive</button>
+            <mat-menu #directive="matMenu">               
                 <button mat-menu-item routerLink="structural-directive">Structural Directive</button>
                 <button mat-menu-item routerLink="attribute-directive">Attirubute Directive</button>
+                <button mat-menu-item routerLink="custom-directive">Custom Directive</button>
             </mat-menu>
+            <button mat-button routerLink="ng-template" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                class="menu-button">
+                <mat-icon>bookmark</mat-icon>
+                <span>ngTemplate Kullanımı</span>
+            </button>
             <button mat-button routerLink="filter" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
                 class="menu-button">
                 <mat-icon>bookmark</mat-icon>
