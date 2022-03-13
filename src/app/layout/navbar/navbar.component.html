@@ -49,16 +49,26 @@
                 <mat-icon>home</mat-icon>
                 <span>Anasayfa</span>
             </button>
-            <button mat-button [matMenuTriggerFor]="multiplerouteroutlet" routerLink="route-navigation" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+            <button mat-button routerLink="bootstrap" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
                 class="menu-button">
+                <mat-icon>bookmark</mat-icon>
+                <span>Bootstrap Kullanımı</span>
+            </button>
+            <button mat-button routerLink="material" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                class="menu-button">
+                <mat-icon>bookmark</mat-icon>
+                <span>Material Kullanımı</span>
+            </button>
+            <button mat-button [matMenuTriggerFor]="multiplerouteroutlet" routerLink="route-navigation"
+                [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="menu-button">
                 <mat-icon>bookmark</mat-icon>
                 <span>Route Navigation Kullanımı</span>
             </button>
             <mat-menu #multiplerouteroutlet="matMenu">
                 <button mat-menu-item routerLink="multiple-router-outlet">Multiple Router Outlet Kullanımı</button>
             </mat-menu>
-            <button mat-button routerLink="router-event-tracking" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
-                class="menu-button">
+            <button mat-button routerLink="router-event-tracking" [routerLinkActiveOptions]="{exact:true}"
+                routerLinkActive="active" class="menu-button">
                 <mat-icon>bookmark</mat-icon>
                 <span>Router Event Takibi</span>
             </button>
@@ -121,13 +131,13 @@
                 <mat-icon>bookmark</mat-icon>
                 <span>Directive Kullanımı</span>
             </button>
-            <mat-menu #directive="matMenu">               
+            <mat-menu #directive="matMenu">
                 <button mat-menu-item routerLink="structural-directive">Structural Directive</button>
                 <button mat-menu-item routerLink="attribute-directive">Attirubute Directive</button>
                 <button mat-menu-item routerLink="custom-directive">Custom Directive</button>
             </mat-menu>
-            <button mat-button routerLink="ng-template" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
-                class="menu-button">
+            <button mat-button routerLink="ng-template" [routerLinkActiveOptions]="{exact:true}"
+                routerLinkActive="active" class="menu-button">
                 <mat-icon>bookmark</mat-icon>
                 <span>ngTemplate Kullanımı</span>
             </button>

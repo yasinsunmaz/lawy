@@ -15,6 +15,7 @@ import { NgQrScannerModule } from 'angular2-qrscanner';
 import { QRCodeModule } from 'angular2-qrcode';
 import { NotificationsService, SimpleNotificationsModule } from 'angular2-notifications';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+//TODO: Bootstrap Kullanımı
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { WavesModule, ButtonsModule, InputsModule, CollapseModule, ModalModule, TooltipModule, PopoverModule
   , DropdownModule } from 'angular-bootstrap-md';
@@ -92,6 +93,8 @@ import { MultipleRouterTwoComponent } from './components/multiple-router-two/mul
 import { MultipleRedirectOneComponent } from './components/multiple-redirect-one/multiple-redirect-one.component';
 import { MultipleRedirectTwoComponent } from './components/multiple-redirect-two/multiple-redirect-two.component';
 import { RouterEventTrackingComponent } from './components/router-event-tracking/router-event-tracking.component';
+import { BootstrapComponent } from './components/bootstrap/bootstrap.component';
+import { MaterialComponent } from './components/material/material.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -159,7 +162,9 @@ import { RouterEventTrackingComponent } from './components/router-event-tracking
     MultipleRouterTwoComponent,
     MultipleRedirectOneComponent,
     MultipleRedirectTwoComponent,
-    RouterEventTrackingComponent
+    RouterEventTrackingComponent,
+    BootstrapComponent,
+    MaterialComponent
   ],
   imports: [
     BrowserModule,
@@ -179,6 +184,7 @@ import { RouterEventTrackingComponent } from './components/router-event-tracking
     QRCodeModule,
     SimpleNotificationsModule.forRoot(),
     ReactiveFormsModule,
+    //TODO: Bootstrap Kullanımı
     MDBBootstrapModule.forRoot(),
     WavesModule,
     CollapseModule,

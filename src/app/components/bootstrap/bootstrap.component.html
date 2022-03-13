@@ -1,0 +1,49 @@
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1 class="title">Bootstrap Kullanımı</h1>
+        <p>Projenizde bootstrap kullanarak duyarlı, hoş ve güzel tasarımlar yapabilirsiniz. Boostrap kullanmak için
+            paketi indirmeniz sonrasında dosyaları tanımlamanız gerekiyor.</p>
+        <p>Örnek için <b>components/bootstrap</b> dizinini inceleyebilirsiniz.</p>
+        <p>Paketin güncel versiyonunu indirmek için:</p>
+        <div class="terminal">
+            <pre><code> {{"npm install bootstrap@next"}} </code></pre>
+        </div>
+        <p>BootstrapMd paketi indirmek için:</p>
+        <div class="terminal">
+            <pre><code> {{"npm install @angular/cdk --save"}} </code></pre>
+            <pre><code> {{"npm install angular-bootstrap-md --save"}} </code></pre>
+        </div>
+        <p>angular.json dosyasında styles kısmınıda tanımlama yapmanız gerekiyor.</p>
+        <div class="terminal">
+            <pre><code> {{"node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss"}} </code></pre>
+            <pre><code> {{"node_modules/angular-bootstrap-md/assets/scss/mdb.scss"}} </code></pre>
+            <pre><code> {{"node_modules/bootstrap/dist/css/bootstrap.min.css"}} </code></pre>
+        </div>
+        <p>Bootstrap ve BootrapMd versiyonu için package.json dosyasında dependencies altında bootstrap ve
+            angular-bootstrap-md kısmına göz
+            atababilirsiniz.</p>
+        <div class="terminal">
+            <pre><code> {{"dependencies/bootstrap"}} </code></pre>
+            <pre><code> {{"dependencies/angular-bootstrap-md"}} </code></pre>
+        </div>
+        <p>app.module.ts içerisinde tanımlama</p>
+        <div class="terminal">
+            <pre><code> {{"imports: [MDBBootstrapModule.forRoot()]"}} </code></pre>
+        </div>
+        <p>BootstrapMd içerisinde istediğiniz paketleri app.module.ts'de tanımlayarak projenizde kullanabilirsiniz.
+            Örneğin buton, input, collapse, modal, dropdown için: {{"import { ButtonsModule, InputsModule,"+
+            +"CollapseModule, ModalModule, DropdownModule } from 'angular-bootstrap-md';"}}</p>
+        <div class="terminal">
+            <pre><code> {{"import { ButtonsModule, InputsModule,"+
+                    +"CollapseModule, ModalModule, DropdownModule } from 'angular-bootstrap-md';"}} </code></pre>
+        </div>
+        <p>Import edilen paketleri çağırmamız yeterlidir.</p>
+        <div class="terminal">
+            <pre><code> {{"imports: [MatButtonModule, InputsModule, CollapseModule, ,ModalModule, DropdownModule.forRoot()]"}} </code></pre>
+        </div>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: Bootstrap Kullanımı
+        </p>
+    </div>
+</mat-sidenav-content>

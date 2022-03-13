@@ -3,6 +3,7 @@ import { AboutLawyComponent } from "../components/about-lawy/about-lawy.componen
 import { AnimationsComponent } from "../components/animations/animations.component";
 import { AttributeDirectiveComponent } from "../components/attribute-directive/attribute-directive.component";
 import { BasicFilterPipeComponent } from "../components/basic-filter-pipe/basic-filter-pipe.component";
+import { BootstrapComponent } from "../components/bootstrap/bootstrap.component";
 import { ComponentComponent } from "../components/component/component.component";
 import { ConstructorComponent } from "../components/constructor/constructor.component";
 import { ContactComponent } from "../components/contact/contact.component";
@@ -16,6 +17,7 @@ import { FirebaseComponent } from "../components/firebase/firebase.component";
 import { IntefaceComponent } from "../components/inteface/inteface.component";
 import { LazyloadImageComponent } from "../components/lazyload-image/lazyload-image.component";
 import { LocalStorageComponent } from "../components/local-storage/local-storage.component";
+import { MaterialComponent } from "../components/material/material.component";
 import { ModelOrientedSetvalueFunctionComponent } from "../components/model-oriented-setvalue-function/model-oriented-setvalue-function.component";
 import { MultipleRedirectOneComponent } from "../components/multiple-redirect-one/multiple-redirect-one.component";
 import { MultipleRedirectTwoComponent } from "../components/multiple-redirect-two/multiple-redirect-two.component";
@@ -43,6 +45,8 @@ import { HomeComponent } from "../layout/home/home.component";
 export const AppRoutes: Routes = [
   //TODO: Route Navigation Kullanımı
   { path: '', component: HomeComponent },
+  { path: 'bootstrap', component: BootstrapComponent },
+  { path: 'material', component: MaterialComponent },
   //{ path: 'route-navigation', component: RouteNavigationComponent },
   //TODO: Multiple Çoklu İç İçe Router Kullanımı
   {
@@ -90,22 +94,12 @@ export const AppRoutes: Routes = [
   { path: 'qr-code', component: QrCodeComponent },
   { path: 'about-lawy', component: AboutLawyComponent },
   { path: 'contact', component: ContactComponent },
-  // { path: 'about', component: AboutComponent },
-  // { path: 'users', component: UsersComponent },
-  // //TODO Url parametre verme
-  // { path: 'users/:id', component: UsersComponent },
+  
   // // {path: 'users/:id',
   // //        component: UsersComponent,
   // //        canDeactivate: [CanDeactivateGuard]},
   // //TODO Yetkiye bağlı url izini verme
   // //{ path: 'users/:id, canActivate:[ExampleGuard], component:  ProductDetailComponent},
-  // { path: 'basicusage', component: BasicusageComponent },
-  // { path: 'angularpipes', component: AngularpipesComponent },
-  // { path: 'angular-app-one', component: AngularAppOneComponent },
-  // { path: 'angular-app-two', component: AngularAppTwoComponent },
-  // { path: 'angular-notification', component: AngularNotificationComponent },
-  // { path: 'qr-read', component: QrReadComponent },
-  // { path: 'local-storage', component: LocalStorageComponent },
   // { path: 'reactive-forms', component: ReactiveFormsComponent,canActivate: [AuthGuard]  },
   // { path: 'login', component: LoginComponent  },
   // {
