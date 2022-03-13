@@ -17,6 +17,11 @@ import { IntefaceComponent } from "../components/inteface/inteface.component";
 import { LazyloadImageComponent } from "../components/lazyload-image/lazyload-image.component";
 import { LocalStorageComponent } from "../components/local-storage/local-storage.component";
 import { ModelOrientedSetvalueFunctionComponent } from "../components/model-oriented-setvalue-function/model-oriented-setvalue-function.component";
+import { MultipleRedirectOneComponent } from "../components/multiple-redirect-one/multiple-redirect-one.component";
+import { MultipleRedirectTwoComponent } from "../components/multiple-redirect-two/multiple-redirect-two.component";
+import { MultipleRouterOneComponent } from "../components/multiple-router-one/multiple-router-one.component";
+import { MultipleRouterOutletComponent } from "../components/multiple-router-outlet/multiple-router-outlet.component";
+import { MultipleRouterTwoComponent } from "../components/multiple-router-two/multiple-router-two.component";
 import { NgTemplateComponent } from "../components/ng-template/ng-template.component";
 import { NotFoundComponent } from "../components/not-found/not-found.component";
 import { NotificationComponent } from "../components/notification/notification.component";
@@ -26,6 +31,8 @@ import { PipesComponent } from "../components/pipes/pipes.component";
 import { PropertyBindingComponent } from "../components/property-binding/property-binding.component";
 import { QrCodeComponent } from "../components/qr-code/qr-code.component";
 import { ReactiveFormsComponent } from "../components/reactive-forms/reactive-forms.component";
+import { RouteNavigationComponent } from "../components/route-navigation/route-navigation.component";
+import { RouterEventTrackingComponent } from "../components/router-event-tracking/router-event-tracking.component";
 import { ServiceComponent } from "../components/service/service.component";
 import { StringInterpolationComponent } from "../components/string-interpolation/string-interpolation.component";
 import { StructuralDirectiveComponent } from "../components/structural-directive/structural-directive.component";
@@ -34,7 +41,24 @@ import { TwoDataBindingComponent } from "../components/two-data-binding/two-data
 import { ValidatorComponent } from "../components/validator/validator.component";
 import { HomeComponent } from "../layout/home/home.component";
 export const AppRoutes: Routes = [
+  //TODO: Route Navigation Kullanımı
   { path: '', component: HomeComponent },
+  //{ path: 'route-navigation', component: RouteNavigationComponent },
+  //TODO: Multiple Çoklu İç İçe Router Kullanımı
+  {
+    path: 'route-navigation', component: RouteNavigationComponent, children: [
+      { path: 'multiple-redirect-one', component: MultipleRedirectOneComponent },
+      { path: 'multiple-redirect-two', component: MultipleRedirectTwoComponent }
+    ]
+  },
+  //TODO: Multiple Route Outlet Kullanımı
+  {
+    path: 'multiple-router-outlet', component: MultipleRouterOutletComponent, children: [
+      { path: 'multiple-router-one', component: MultipleRouterOneComponent, outlet: "multipleRouterOutlet" },
+      { path: 'multiple-router-two', component: MultipleRouterTwoComponent, outlet: "multipleRouterOutlet" }
+    ]
+  },
+  { path: 'router-event-tracking', component: RouterEventTrackingComponent },
   { path: 'firebase', component: FirebaseComponent },
   { path: 'one-data-binding', component: OneDataBindingComponent },
   { path: 'two-data-binding', component: TwoDataBindingComponent },
@@ -84,11 +108,6 @@ export const AppRoutes: Routes = [
   // { path: 'local-storage', component: LocalStorageComponent },
   // { path: 'reactive-forms', component: ReactiveFormsComponent,canActivate: [AuthGuard]  },
   // { path: 'login', component: LoginComponent  },
-  // //TODO Multiple çoklu iç içe router kullanımı
-  // { path: 'teams', component: TeamsComponent, children:[
-  //   {path: 'team-software', component:TeamSoftwareComponent},
-  //   {path: 'team-framework', component:TeamFrameworkComponent}
-  // ] },
   // {
   //   path:"lazy",
   //   loadChildren: () => import('../lazy/lazy.module').then(m => m.LazyModule)

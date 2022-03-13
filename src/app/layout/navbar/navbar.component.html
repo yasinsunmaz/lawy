@@ -49,6 +49,19 @@
                 <mat-icon>home</mat-icon>
                 <span>Anasayfa</span>
             </button>
+            <button mat-button [matMenuTriggerFor]="multiplerouteroutlet" routerLink="route-navigation" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                class="menu-button">
+                <mat-icon>bookmark</mat-icon>
+                <span>Route Navigation Kullanımı</span>
+            </button>
+            <mat-menu #multiplerouteroutlet="matMenu">
+                <button mat-menu-item routerLink="multiple-router-outlet">Multiple Router Outlet Kullanımı</button>
+            </mat-menu>
+            <button mat-button routerLink="router-event-tracking" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                class="menu-button">
+                <mat-icon>bookmark</mat-icon>
+                <span>Router Event Takibi</span>
+            </button>
             <button mat-button routerLink="component" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
                 class="menu-button">
                 <mat-icon>bookmark</mat-icon>

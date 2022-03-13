@@ -1,0 +1,27 @@
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1 class="title">Multiple Router Outlet Kullanımı</h1>
+        <p>Uygulamada “name” özelliği belirtilen router outlet’e, route yapılanmasında “outlet” değeriyle erişim
+            sağlanmakta ve bu şekilde hangi componentin hangi route outlet alanında yayınlanacağı belirtilmektedir.</p>
+        <p>Örnek için <b>components/multiple-router-outlet</b> dizinini inceleyebilirsiniz.</p>
+        <p class="bold">Multiple çoklu iç içe router kullanımı.</p>
+        <div class="terminal">
+            <pre><code> {{"{ path: 'teams', component: TeamsComponent, children:[{path: 'team-software', component:TeamSoftwareComponent},{path: 'team-framework', component:TeamFrameworkComponent}] },"}} </code></pre>
+        </div>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: Multiple Router Outlet Kullanımı
+        </p>
+        <h4 class="example">Uygulamalar</h4>
+        <p>Tıkladığınızda tanımlı component bu sayfa içerisinde çağırılacaktır.</p>
+        <ul class="list-group">
+            <li class="list-group-item" [routerLink]="[{outlets:{multipleRouterOutlet:['multiple-router-one']}}]">
+                Multiple Route Outlet
+                1</li>
+            <li class="list-group-item" [routerLink]="[{outlets:{multipleRouterOutlet:['multiple-router-two']}}]">
+                Multiple Route Outlet
+                2</li>
+        </ul>
+        <router-outlet name="multipleRouterOutlet"></router-outlet>
+    </div>
+</mat-sidenav-content>

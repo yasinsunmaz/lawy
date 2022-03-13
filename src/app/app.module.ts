@@ -86,6 +86,12 @@ import { ModelOrientedSetvalueFunctionComponent } from './components/model-orien
 import { OutputInputComponent } from './components/output-input/output-input.component';
 import { ColorDirective } from './directives/color.directive';
 import { NgTemplateComponent } from './components/ng-template/ng-template.component';
+import { MultipleRouterOutletComponent } from './components/multiple-router-outlet/multiple-router-outlet.component';
+import { MultipleRouterOneComponent } from './components/multiple-router-one/multiple-router-one.component';
+import { MultipleRouterTwoComponent } from './components/multiple-router-two/multiple-router-two.component';
+import { MultipleRedirectOneComponent } from './components/multiple-redirect-one/multiple-redirect-one.component';
+import { MultipleRedirectTwoComponent } from './components/multiple-redirect-two/multiple-redirect-two.component';
+import { RouterEventTrackingComponent } from './components/router-event-tracking/router-event-tracking.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -147,7 +153,13 @@ import { NgTemplateComponent } from './components/ng-template/ng-template.compon
     ModelOrientedSetvalueFunctionComponent,
     OutputInputComponent,
     ColorDirective,
-    NgTemplateComponent
+    NgTemplateComponent,
+    MultipleRouterOutletComponent,
+    MultipleRouterOneComponent,
+    MultipleRouterTwoComponent,
+    MultipleRedirectOneComponent,
+    MultipleRedirectTwoComponent,
+    RouterEventTrackingComponent
   ],
   imports: [
     BrowserModule,

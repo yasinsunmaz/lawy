@@ -1,1 +1,37 @@
-<p>route-navigation works!</p>
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1 class="title">Route Navigation Kullanımı</h1>
+        <p>Projenizde saylarımızı ve url isimlerini tanımlayabiliriz.</p>
+        <p>Örnek için <b>components/route-navigation</b> dizinini inceleyebilirsiniz.</p>
+        <p class="bold">Varsayılan sayfa için aşağıdaki tanımlama yapabilirsiniz.</p>
+        <div class="terminal">
+            <pre><code> {{"{ path: '', component: HomeComponent }"}} </code></pre>
+        </div>
+        <p class="bold">Componentte parametreli url kullanacaksak aşağıdaki parametre adını tanımlamamız gerekir.
+            UsersComponent için "id" parametresi tanımladık.</p>
+        <div class="terminal">
+            <pre><code> {{"{ path: 'users/:id', component: UsersComponent }"}} </code></pre>
+        </div>
+        <p class="bold">404 sayfa yönlendirme yapmak için aşağıdaki gibi tanımlama yapmamız gerekiyor.</p>
+        <div class="terminal">
+            <pre><code> {{"{ path: '404', component: PageNotFoundComponent },{ path: '**', redirectTo: '/404' }"}} </code></pre>
+        </div>
+        <p class="bold">Multiple Çoklu İç İçe Router Kullanımı ile route altında child tanımlayarak component içinde
+            çoklu route
+            kullanabiliriz.</p>
+        <div class="terminal">
+            <pre><code> {{"path: 'multiple-router-outlet', component: MultipleRouterOutletComponent, children: [{ path: 'multiple-router-one', component: MultipleRouterOneComponent },{ path: 'multiple-router-two', component: MultipleRouterTwoComponent }]"}} </code></pre>
+        </div>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: Route Navigation Kullanımı
+        </p>
+        <h4 class="example">Uygulamalar</h4>
+        <h4>Multiple Çoklu İç İçe Router Kullanımı</h4>
+        <ul class="list-group">
+            <li class="list-group-item" routerLink="multiple-redirect-one">Multiple Route 1</li>
+            <li class="list-group-item" routerLink="multiple-redirect-two">Multiple Route 2</li>
+        </ul>
+        <router-outlet></router-outlet>
+    </div>
+</mat-sidenav-content>

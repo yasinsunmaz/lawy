@@ -98,3 +98,6 @@ span.example{
   padding: 0 1rem 1rem;
   margin: 0;
 }
+.bold{
+  font-weight: bold;
+}
