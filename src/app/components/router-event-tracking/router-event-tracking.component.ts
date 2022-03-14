@@ -12,25 +12,26 @@ export class RouterEventTrackingComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.router.events
-      .subscribe(e => {
-        if (e instanceof NavigationStart)
-          alert(`RouterEventTracking Component Durumu : NavigationStart`);
-        else if (e instanceof NavigationEnd)
-          alert(`RouterEventTracking Component Durumu : NavigationEnd`);
-        else if (e instanceof NavigationCancel)
-          alert(`RouterEventTracking Component Durumu : NavigationCancel`);
-        else if (e instanceof NavigationError)
-          alert('RouterEventTracking Component Durumu : NavigationError');
-        else if (e instanceof Scroll)
-          alert('RouterEventTracking Component Durumu : Scroll');
-      });
+    //TODO: Bütün Projede Event Takibi
+    // this.router.events
+    //   .subscribe(e => {
+    //     if (e instanceof NavigationStart)
+    //       alert(`RouterEventTracking Component Durumu : NavigationStart`);
+    //     else if (e instanceof NavigationEnd)
+    //       alert(`RouterEventTracking Component Durumu : NavigationEnd`);
+    //     else if (e instanceof NavigationCancel)
+    //       alert(`RouterEventTracking Component Durumu : NavigationCancel`);
+    //     else if (e instanceof NavigationError)
+    //       alert('RouterEventTracking Component Durumu : NavigationError');
+    //     else if (e instanceof Scroll)
+    //       alert('RouterEventTracking Component Durumu : Scroll');
+    //   });
     //TODO: Detaylı Component Router Event Takibi
-    this.router.events
-      .pipe(filter(event => event instanceof RoutesRecognized))
-      .subscribe((event) => {
-        console.log("Component Takibi: " + event);
-      });
+    // this.router.events
+    //   .pipe(filter(event => event instanceof RoutesRecognized))
+    //   .subscribe((event) => {
+    //     console.log("Component Takibi: " + event);
+    //   });
   }
 
 }
