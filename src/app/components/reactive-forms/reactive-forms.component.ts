@@ -47,7 +47,7 @@ export class ReactiveFormsComponent implements OnInit {
   onCreateUser() {
     if (this.userForm.valid) {
       this.userParam = Object.assign({}, this.userForm.value);
-      console.log(this.userParam);
+      // console.log(this.userParam);
       localStorage.setItem("userData", JSON.stringify(this.userParam))
       this.status = true;
       if (this.status === true) {
