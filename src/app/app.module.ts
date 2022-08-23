@@ -10,7 +10,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { NgQrScannerModule } from 'angular2-qrscanner';
 import { QRCodeModule } from 'angular2-qrcode';
 import { NotificationsService, SimpleNotificationsModule } from 'angular2-notifications';
@@ -95,6 +95,15 @@ import { MultipleRedirectTwoComponent } from './components/multiple-redirect-two
 import { RouterEventTrackingComponent } from './components/router-event-tracking/router-event-tracking.component';
 import { BootstrapComponent } from './components/bootstrap/bootstrap.component';
 import { MaterialComponent } from './components/material/material.component';
+import { ExtraComponent } from './components/extra/extra.component';
+import { APP_BASE_HREF } from '@angular/common';
+import { ExtraBehevaiorComponent } from './components/extra-behevaior/extra-behevaior.component';
+import { BaseComponent } from './components/base/base.component';
+import { TokenInterceptor } from './interceptor/token.interceptor';
+import { ResolveComponent } from './components/resolve/resolve.component';
+import { CallComponentComponent } from './components/call-component/call-component.component';
+import { TemplatesComponent } from './components/templates/templates.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -164,7 +173,13 @@ import { MaterialComponent } from './components/material/material.component';
     MultipleRedirectTwoComponent,
     RouterEventTrackingComponent,
     BootstrapComponent,
-    MaterialComponent
+    MaterialComponent,
+    ExtraComponent,
+    ExtraBehevaiorComponent,
+    BaseComponent,
+    ResolveComponent,
+    CallComponentComponent,
+    TemplatesComponent
   ],
   imports: [
     BrowserModule,
@@ -201,7 +216,8 @@ import { MaterialComponent } from './components/material/material.component';
     provideFirestore(() => getFirestore()),
   ],
   providers: [
-    NotificationsService
+    NotificationsService, {provide:APP_BASE_HREF, useValue:  environment.baseUrl,}//TODO Base url için
+    ,{provide:HTTP_INTERCEPTORS,useClass:TokenInterceptor,multi:true}//TODO Interceptor kullanımı
   ],
   bootstrap: [AppComponent]
 })

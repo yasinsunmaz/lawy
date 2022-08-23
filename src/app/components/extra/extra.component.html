@@ -1,0 +1,29 @@
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1 class="title">Notification Kullanımı</h1>
+        <p>Yapılan işlemler sonucunda kullanıcıya bildirim olarak gösterme.</p>
+        <p>Örnek için <b>components/notifications</b> dizinini inceleyebilirsiniz.</p>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: Extra Kullanımı
+        </p>
+        <h4 class="example">Uygulamalar</h4>
+        <ul>
+            <li *ngFor="let item of names let i=index trackBy:trackByFn">
+                {{item?.name}}-{{i}}
+            </li>
+        </ul>
+        <p #div1>Yasin</p>
+        <hr>
+
+        <button (click)="loadTodo()">load Todos</button>
+            <p>
+                {{counter}}
+                                I
+            </p>
+            <button (click)="increase()">+</button>
+            <button (click)="decrease()">-</button>
+
+            <app-extra-behevaior></app-extra-behevaior>
+    </div>
+</mat-sidenav-content>

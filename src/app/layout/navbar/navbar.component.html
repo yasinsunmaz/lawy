@@ -54,6 +54,11 @@
                 <mat-icon>bookmark</mat-icon>
                 <span>Bootstrap Kullanımı</span>
             </button>
+            <button mat-button routerLink="call-component" [routerLinkActiveOptions]="{exact:true}"
+                routerLinkActive="active" class="menu-button">
+                <mat-icon>bookmark</mat-icon>
+                <span>Component Çağırma</span>
+            </button>
             <button mat-button routerLink="material" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
                 class="menu-button">
                 <mat-icon>bookmark</mat-icon>
@@ -182,13 +187,17 @@
                 <mat-icon>bookmark</mat-icon>
                 <span>QRCode Kullanımı</span>
             </button>
+            <button mat-button routerLink="resolve" class="menu-button">
+                <mat-icon>bookmark</mat-icon>
+                <span>Resolve Yapısı</span>
+            </button>
         </mat-sidenav>
-        <mat-sidenav-content>
+        <mat-sidenav-container>
             <div class="content mat-elevation-z8">
                 <div class="content" role="main">
                     <router-outlet></router-outlet>
                 </div>
             </div>
-        </mat-sidenav-content>
+        </mat-sidenav-container>
     </mat-sidenav-container>
 </section>

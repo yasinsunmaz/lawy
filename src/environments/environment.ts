@@ -12,7 +12,8 @@ export const environment = {
     storageBucket: "ys-users.appspot.com",
     messagingSenderId: "1074020444959",
     appId: "1:1074020444959:web:c3281068fc85aa7b8cde2a"
-  }
+  },
+  baseUrl:''//TODO Base url için
 };
 
 /*

@@ -34,5 +34,14 @@
         <ng-template #template2>
             <h2>Template 2</h2>
         </ng-template>
+
+        <div *ngIf="count>10 then templateOne else templateTwo"></div>
+        <ng-template #templateOne>
+            <h2>Template One</h2>
+        </ng-template>
+
+        <ng-template #templateTwo>
+            <h2>Template Two</h2>
+        </ng-template>
     </div>
 </mat-sidenav-content>
