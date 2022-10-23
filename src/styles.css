@@ -40,17 +40,21 @@ footer button:hover {
   background-color: #d70d45;
   color: white;
 }
-h5.title{
-  margin:10px 0;
+
+h5.title {
+  margin: 10px 0;
   font-weight: bold;
   font-size: 16px;
 }
-p{
+
+p {
   font-size: 14px;
 }
-span{
+
+span {
   font-size: 14px;
 }
+
 p.todo-name {
   color: orange;
 }
@@ -62,9 +66,11 @@ p.todo-name mat-icon {
 p {
   margin-bottom: 0;
 }
-span.example{
+
+span.example {
   font-style: italic;
 }
+
 .terminal {
   position: relative;
   width: 80%;
@@ -97,6 +103,12 @@ span.example{
   padding: 0 1rem 1rem;
   margin: 0;
 }
-.bold{
+
+.bold {
   font-weight: bold;
+}
+
+.content {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }

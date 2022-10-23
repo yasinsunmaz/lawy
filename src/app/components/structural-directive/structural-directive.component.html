@@ -23,7 +23,20 @@
         </p>
         <h4>ngFor Kullanımı</h4>
         <p>*ngFor directive, bir list için HTML üzerinde yinelenebilir html parçaları eklemeye yarar.</p>
-        <div class="row mt-2" *ngFor="let user of users; let i=index">
+        <h6>Liste Elamını Listeleme</h6>
+        <div class="row mt-2 mr-0" *ngFor="let user of userItem; let i=index">
+            <div class="col">{{i+1}}</div>
+            <div class="col">{{user}}</div>
+        </div>
+        <h6>Array Tanmlayarak nFor Kullanımı</h6>
+        <div class="row mt-2 mr-0" *ngFor="let user of userItems; let i=index">
+            <div class="col">{{i+1}}</div>
+            <div class="col">{{user.id}}</div>
+            <div class="col">{{user.name}}</div>
+            <div class="col">{{user.surname}}</div>
+        </div>
+        <h6>Pipe Kullanarak Listeme</h6>
+        <div class="row mt-2 mr-0" *ngFor="let user of users; let i=index">
             <div class="col">{{i+1}}</div>
             <div class="col">{{user.name}}</div>
             <div class="col">{{user.age}}</div>

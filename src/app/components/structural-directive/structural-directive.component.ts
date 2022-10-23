@@ -10,6 +10,17 @@ export class StructuralDirectiveComponent implements OnInit {
   //TODO: Structural Directive Kullanımı
   condition: boolean = true;
   ngIfStatus: boolean = true;
+
+  userItem = [
+    "Yasin", "Sunmaz", "yasinsunmaz.com"
+  ];
+
+  userItems = [
+    { id: 1, name: "Yasin", surname: "Sunmaz" },
+    { id: 2, name: "Mahmut", surname: "Kara" },
+    { id: 3, name: "Murat", surname: "Konar" }
+  ];
+
   users = [
     new UserPipeModel('Yasin', 'Erkek', 26),
     new UserPipeModel('Tayfun', 'Erkek', 28),
@@ -17,7 +28,8 @@ export class StructuralDirectiveComponent implements OnInit {
     new UserPipeModel('Hakan', 'Erkek', 27),
     new UserPipeModel('Berrin', 'Belirtilmemiş', 51),
     new UserPipeModel('Elif', 'Kadın', 34),
-  ]
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
