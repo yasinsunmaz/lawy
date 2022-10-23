@@ -3,17 +3,28 @@
         <h1 class="title">Event Binding Kullanımı</h1>
         <p>Örnek için <b>components/event-binding</b> dizinini inceleyebilirsiniz.</p>
         <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <ul>
+            <li>(blur): İnput dışına tıklandığında tetiklenir.</li>
+            <li>(keyup): İnputa tıklandığından itibaren tetiklenir.</li>
+            <li>(keyup.enter): Enter'a basıldığında tetiklenir.</li>
+        </ul>
         <p class="todo-name">
             <mat-icon>chevron_right</mat-icon>TODO: Event Binding Kullanımı
         </p>
         <h4 class="example">Uygulamalar</h4>
+        <p><b>Buton İle Veri Ekleme</b></p>
+        <p>
+            Normal yöntem<input type="text" #product />
+            <button (click)="addProduct(product.value);" mdbBtn class="btn btn-sm btn-success">Ürün Ekle</button>
+        </p>
+        <p>(blur)<input type="text" #product2 (blur)="addProduct(product2.value)" /></p>
+        <p>(keyup.enter)<input type="text" #product3 (keyup.enter)="addProduct(product3.value)" /></p>
+        <p>(keyup)<input type="text" #product4 (keyup)="addProduct(product4.value)" /></p>
+        <p>
+            Ürün Adı: {{ productName }}
+        </p>
         <p><b>Keyup Kullanımı</b></p>
         <input type="text" [value]="name" (keyup)="handleKeyup($event)" />
-        <p>
-            {{ name }}
-        </p>
-        <p><b>Enter Kullanımı</b></p>
-        <input type="text" [value]="name" (input)="handleKeyup($event)" />
         <p>
             {{ name }}
         </p>
@@ -22,7 +33,25 @@
         <p>
             {{ name }}
         </p>
+        <p><b>Blur Kullanımı</b></p>
+        <input type="text" [value]="name" (blur)="handleKeyup($event)" />
+        <p>
+            {{ name }}
+        </p>
         <p><b>Click Kullanımı</b></p>
-        <button (click)="handleClear()" mdbBtn>TEMİZLE</button>
+        <button (click)="handleClear()" mdbBtn class="btn btn-sm">Temizle</button>
+        <h6>Modelde Eklenen Veriler Üzerine Veri Ekleme</h6>
+        <p>Listeye eleman eklemek için butona veya enter a basın.</p>
+        <p>Adı: <input type="text" #name /></p>
+        <p>Soyadı: <input type="text" #surname /></p>
+        <p>Email: <input type="text" #email /></p>
+        <p>Adres: <input type="text" #address /></p>
+        <button (click)="addUserItem(name.value, surname.value, email.value, address.value)" mdbBtn
+            class="btn btn-sm btn-success">Kişi Ekle</button>
+        <ul>
+            <li *ngFor="let user of getUserItems()">
+                {{user.name}} {{user.surname}} {{user.email}} {{user.address}}
+            </li>
+        </ul>
     </div>
 </mat-sidenav-content>
