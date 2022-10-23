@@ -11,3 +11,13 @@ export class Users {
         this.address = addressP;
     }
 }
+
+//TODO: Constructor Kullanımı - Daha Kısa Kullanımı
+export class UsersShortUsing {    
+    constructor(public name: string,public surname: string,public email: string,public address: string) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.address = address;
+    }
+}

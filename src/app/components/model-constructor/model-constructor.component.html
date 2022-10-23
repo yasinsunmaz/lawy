@@ -1,0 +1,23 @@
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1 class="title">Model ve Contructor Kullanımı</h1>
+        <p>Model tanımlayarak constructor ile verilerinizi daha düzenli kontrol edebilirsiniz.</p>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: Model-Contructor Kullanımı
+        </p>
+        <h4 class="example">Uygulamalar</h4>
+        <h6>Constructor İle Eklenen Verileri Listeleme</h6>
+        <ul>
+            <li *ngFor="let user of items">
+                {{user.name}} {{user.surname}} - {{user.email}} - {{user.address}}
+            </li>
+        </ul>
+        <h6>Modelde Eklenen Verileri Listeleme</h6>
+        <ul>
+            <li *ngFor="let user of getUserItems()">
+                {{user.name}} {{user.surname}} - {{user.email}} - {{user.address}}
+            </li>
+        </ul>
+    </div>
+</mat-sidenav-content>

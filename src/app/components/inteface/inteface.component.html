@@ -5,10 +5,17 @@
         <p>Inteface isimlendirmeleri I ile başlamalıdır. Örneğin user için bir interface oluşturacaksak IUser şeklinde
             bir tanımlama uygun
             olacaktır.</p>
-        <p>Örnek interface için <b>interfaces/iuser.ts</b> dosyasını inceleyebilirsiniz.</p>
+        <p>Örnek interface için <b>interfaces/user.ts</b> dosyasını inceleyebilirsiniz.</p>
         <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
         <p class="todo-name">
             <mat-icon>chevron_right</mat-icon>TODO: Interface Kullanımı
         </p>
+        <h4 class="example">Uygulamalar</h4>
+        <h6>Constructor Olmadan Eklenen Verileri Listeleme</h6>
+        <ul>
+            <li *ngFor="let user of items">
+                {{user.firstname}} {{user.lastname}} - {{user.gender}} - {{user.phone}} - {{user.email}}
+            </li>
+        </ul>
     </div>
 </mat-sidenav-content>

@@ -20,6 +20,7 @@ import { IntefaceComponent } from "../components/inteface/inteface.component";
 import { LazyloadImageComponent } from "../components/lazyload-image/lazyload-image.component";
 import { LocalStorageComponent } from "../components/local-storage/local-storage.component";
 import { MaterialComponent } from "../components/material/material.component";
+import { ModelConstructorComponent } from "../components/model-constructor/model-constructor.component";
 import { ModelOrientedSetvalueFunctionComponent } from "../components/model-oriented-setvalue-function/model-oriented-setvalue-function.component";
 import { MultipleRedirectOneComponent } from "../components/multiple-redirect-one/multiple-redirect-one.component";
 import { MultipleRedirectTwoComponent } from "../components/multiple-redirect-two/multiple-redirect-two.component";
@@ -103,6 +104,7 @@ export const AppRoutes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'resolve', component: ResolveComponent, resolve:{todos:TodoResolver} },
   { path: 'call-component', component: CallComponentComponent },
+  { path: 'model-constructor', component: ModelConstructorComponent },
   // // {path: 'users/:id',
   // //        component: UsersComponent,
   // //        canDeactivate: [CanDeactivateGuard]},

@@ -103,6 +103,7 @@ import { TokenInterceptor } from './interceptor/token.interceptor';
 import { ResolveComponent } from './components/resolve/resolve.component';
 import { CallComponentComponent } from './components/call-component/call-component.component';
 import { TemplatesComponent } from './components/templates/templates.component';
+import { ModelConstructorComponent } from './components/model-constructor/model-constructor.component';
 
 @NgModule({
   declarations: [
@@ -179,7 +180,8 @@ import { TemplatesComponent } from './components/templates/templates.component';
     BaseComponent,
     ResolveComponent,
     CallComponentComponent,
-    TemplatesComponent
+    TemplatesComponent,
+    ModelConstructorComponent
   ],
   imports: [
     BrowserModule,
