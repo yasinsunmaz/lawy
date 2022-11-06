@@ -24,29 +24,29 @@
             Ürün Adı: {{ productName }}
         </p>
         <p><b>Keyup Kullanımı</b></p>
-        <input type="text" [value]="name" (keyup)="handleKeyup($event)" />
+        <input type="text" [value]="inputevent" (keyup)="handleKeyup($event)" />
         <p>
-            {{ name }}
+            {{ inputevent }}
         </p>
         <p><b>Keyup Enter Kullanımı</b></p>
-        <input type="text" [value]="name" (keyup.enter)="handleKeyup($event)" />
+        <input type="text" [value]="inputevent" (keyup.enter)="handleKeyup($event)" />
         <p>
-            {{ name }}
+            {{ inputevent }}
         </p>
         <p><b>Blur Kullanımı</b></p>
-        <input type="text" [value]="name" (blur)="handleKeyup($event)" />
+        <input type="text" [value]="inputevent" (blur)="handleKeyup($event)" />
         <p>
-            {{ name }}
+            {{ inputevent }}
         </p>
         <p><b>Click Kullanımı</b></p>
         <button (click)="handleClear()" mdbBtn class="btn btn-sm">Temizle</button>
         <h6>Modelde Eklenen Veriler Üzerine Veri Ekleme</h6>
         <p>Listeye eleman eklemek için butona veya enter a basın.</p>
-        <p>Adı: <input type="text" #name /></p>
+        <p>Adı: <input type="text" #firstname /></p>
         <p>Soyadı: <input type="text" #surname /></p>
         <p>Email: <input type="text" #email /></p>
         <p>Adres: <input type="text" #address /></p>
-        <button (click)="addUserItem(name.value, surname.value, email.value, address.value)" mdbBtn
+        <button (click)="addUserItem(firstname.value, surname.value, email.value, address.value)" mdbBtn
             class="btn btn-sm btn-success">Kişi Ekle</button>
         <ul>
             <li *ngFor="let user of getUserItems()">

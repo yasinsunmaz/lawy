@@ -8,14 +8,14 @@ import { UserModel } from 'src/app/entities/user-model';
 })
 export class EventBindingComponent implements OnInit {
   //TODO: Event Binding Kullanımı
-  name: string = "Yasin SUNMAZ";
+  inputevent: string = "Yasin SUNMAZ";
   productName: string;
   handleKeyup(event: any): void {
-    this.name = event.target.value;
+    this.inputevent = event.target.value;
     console.log(event);
   }
   handleClear(): void {
-    this.name = "";
+    this.inputevent = "";
   }
   addProduct(product: any) {
     if (product != "") {

@@ -104,6 +104,7 @@ import { ResolveComponent } from './components/resolve/resolve.component';
 import { CallComponentComponent } from './components/call-component/call-component.component';
 import { TemplatesComponent } from './components/templates/templates.component';
 import { ModelConstructorComponent } from './components/model-constructor/model-constructor.component';
+import { ClassBindingComponent } from './components/class-binding/class-binding.component';
 
 @NgModule({
   declarations: [
@@ -181,7 +182,8 @@ import { ModelConstructorComponent } from './components/model-constructor/model-
     ResolveComponent,
     CallComponentComponent,
     TemplatesComponent,
-    ModelConstructorComponent
+    ModelConstructorComponent,
+    ClassBindingComponent
   ],
   imports: [
     BrowserModule,

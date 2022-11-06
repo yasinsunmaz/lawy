@@ -5,6 +5,7 @@ import { AttributeDirectiveComponent } from "../components/attribute-directive/a
 import { BasicFilterPipeComponent } from "../components/basic-filter-pipe/basic-filter-pipe.component";
 import { BootstrapComponent } from "../components/bootstrap/bootstrap.component";
 import { CallComponentComponent } from "../components/call-component/call-component.component";
+import { ClassBindingComponent } from "../components/class-binding/class-binding.component";
 import { ComponentComponent } from "../components/component/component.component";
 import { ConstructorComponent } from "../components/constructor/constructor.component";
 import { ContactComponent } from "../components/contact/contact.component";
@@ -105,6 +106,7 @@ export const AppRoutes: Routes = [
   { path: 'resolve', component: ResolveComponent, resolve:{todos:TodoResolver} },
   { path: 'call-component', component: CallComponentComponent },
   { path: 'model-constructor', component: ModelConstructorComponent },
+  { path: 'class-binding', component: ClassBindingComponent },
   // // {path: 'users/:id',
   // //        component: UsersComponent,
   // //        canDeactivate: [CanDeactivateGuard]},

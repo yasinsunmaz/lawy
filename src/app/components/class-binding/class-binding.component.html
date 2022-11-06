@@ -1,0 +1,45 @@
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <h1 class="title">Class Binding Kullanımı</h1>
+        <p>Örnek için <b>components/class-binding</b> dizinini inceleyebilirsiniz.</p>
+        <h4 class="todo-title">TODO İle Proje İçerisinde Arama</h4>
+        <p class="todo-name">
+            <mat-icon>chevron_right</mat-icon>TODO: Class Binding Kullanımı
+        </p>
+        <h4 class="example">Uygulamalar</h4>
+        <h6>Modelde Eklenen Veriler Üzerine Veri Ekleme</h6>
+        <p>Listeye eleman eklemek için butona veya enter a basın.</p>
+        <p>Adı: <input type="text" [(ngModel)]="inputFirstName" /></p>
+        <p>Soyadı: <input type="text" #surname /></p>
+        <p>Email: <input type="text" #email /></p>
+        <p>Adres: <input type="text" #address /></p>
+        <button (click)="addUserItem(surname.value, email.value, address.value)" mdbBtn
+            [class.disabled]="inputFirstName.length==0" class="btn btn-sm btn-success">KİŞİ EKLE</button>
+        <!-- <button (click)="addUserItem(surname.value, email.value, address.value)" mdbBtn [class]="{
+                'disabled':inputFirstName.length==0,
+                'btn-secondary':inputFirstName.length!=0,
+                'btn-success':inputFirstName.length>0
+            }" class="btn btn-sm btn-success">KİŞİ EKLE 2</button> -->
+            <button (click)="addUserItem(surname.value, email.value, address.value)" mdbBtn [class]="getBtnClass()" class="btn btn-sm btn-success">KİŞİ EKLE 2</button>
+        <h6>Class Binding Kullanımı(Adresi "AYDIN" olanlar arka planı mavi olacak)</h6>
+        <ul>
+            <li *ngFor="let user of getUserItems()" [class.bg-primary]="user.address=='AYDIN'" class="p-1">
+                {{user.name}} {{user.surname}} {{user.email}} {{user.address}}
+            </li>
+        </ul>
+        <h6>Class Binding Kullanımı 2(Adresi "AYDIN" olmayanlar arka planı kırmızı olacak)</h6>
+        <ul>
+            <li *ngFor="let user of getUserItems()" [class.bg-primary]="user.address=='AYDIN'"
+                [class.bg-danger]="user.address!='AYDIN'" class="p-1">
+                {{user.name}} {{user.surname}} {{user.email}} {{user.address}}
+            </li>
+        </ul>
+        <h6>Class Binding Kullanımı 3(Yukarıdaki iki örneğiş farklı bir kullanım şekli)</h6>
+        <ul>
+            <li *ngFor="let user of getUserItems()"
+                [class]="{'bg-primary':user.address=='AYDIN', 'bg-danger':user.address!='AYDIN'}" class="p-1">
+                {{user.name}} {{user.surname}} {{user.email}} {{user.address}}
+            </li>
+        </ul>
+    </div>
+</mat-sidenav-content>
