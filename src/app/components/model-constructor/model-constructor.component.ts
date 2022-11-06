@@ -8,8 +8,11 @@ import { UserModel } from 'src/app/entities/user-model';
   styleUrls: ['./model-constructor.component.css']
 })
 export class ModelConstructorComponent implements OnInit {
-
-  constructor() { }
+  liveInAydin: UserItem[];
+  
+  constructor() { 
+    this.liveInAydin= this.model.getLiveInAydin();
+  }
 
   ngOnInit(): void {
   }
@@ -18,7 +21,7 @@ export class ModelConstructorComponent implements OnInit {
     new UserItem("Yasin", "Sunmaz", "info@yasinsunmaz.com", "AYDIN"),
     new UserItem("Yasin", "Sunmaz", "info@yasinsunmaz.com", "ANKARA"),
     new UserItem("Yasin", "Sunmaz", "info@yasinsunmaz.com", "İZMİR"),
-    new UserItem("Yasin", "Sunmaz", "info@yasinsunmaz.com", "MUĞLA"),
+    new UserItem("Yasin", "Sunmaz", "info@yasinsunmaz.com", "AYDIN"),
   ];
 
   //Model Construcor Farklı Kullanımı

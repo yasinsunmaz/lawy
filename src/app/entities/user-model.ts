@@ -15,4 +15,9 @@ export class UserModel {
             { name: "Üye 4", surname: "Sunmaz", email: "uye4@yasinsunmaz.com", address: "AYDIN" },
         ]
     }
+
+    getLiveInAydin(): UserItem[] {
+        return this.userItems.filter(i => i.address == "AYDIN");
+    }
+
 }
