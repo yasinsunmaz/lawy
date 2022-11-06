@@ -76,6 +76,15 @@
         <p>
             {{0.259| percent}}
         </p>
+        <p>
+            {{0.0259| percent}}
+        </p>
+        <p>
+            {{1.26| percent:'2.2-4'}}
+        </p>
+        <p>
+            {{3/4| percent:'2.2-4'}}
+        </p>
 
         <h5 class="title">DecimalPipe | Ondalıklı Gösterme</h5>
         <p>
@@ -83,6 +92,12 @@
         </p>
         <p>
             {{6.256341| number}}
+        </p>
+        <p>
+            {{6.584846 | number: '2.0-3'}}
+        </p>
+        <p>
+            {{2.584846 | number: '2.1-7'}}
         </p>
 
         <h5 class="title">KeyValuePipe | ngFor Döngüsü</h5>
@@ -128,12 +143,31 @@
             Yılın kaçıncı haftası olduğunu öğrenmek için:
             {{ nowDate| date:'w'}}
         </p>
-
+        <p>
+            {{nowDate | date:'fullDate'}}
+        </p> 
+        <p>
+            {{nowDate | date:'medium'}}
+        </p>
+        <p>
+            {{nowDate | date:'shortTime'}}
+        </p>
+        <p>
+            {{nowDate | date:'h:mm:ss'}}
+        </p>
         <h5 class="title">JsonPipe</h5>
         <p>Nesnemizi json tipinde ekranda gösterebiliriz.</p>
         <span class="example">Orijinal Ekran Çıktısı:</span>
         <p>{{ myObject }}</p>
         <span class="example">Pipe'lı Ekran Çıktısı</span>
         <p>{{ myObject | json}}</p>
+
+        <h5 class="title">Pipe Tarih Bilgisini Türkçe Olarak Gösterilmesi</h5>
+        <p>angular.json dosyası içerisinde "schematics" alt satırına "i18n" olarak tanımlama yapıp içerisine
+            "sourceLocale":"tr" şeklinde tr yazmalısınız.</p>
+        <p>Eğer kurulu değilde localize paketini kurmalısınız.</p>
+        <div class="terminal">
+            <pre><code>ng add @angular/localize</code></pre>
+        </div>
     </div>
 </mat-sidenav-content>
