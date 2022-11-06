@@ -43,5 +43,12 @@
         <ng-template #templateTwo>
             <h2>Template Two</h2>
         </ng-template>
+        <h5>ng-template Template İçeriğini Parametre Olarak Göndermek</h5>
+        <ng-container *ngTemplateOutlet="fullNameTemplate; context: { fullname_param: 'Yasin Sunmaz' }"></ng-container>
+        <ng-template [ngTemplateOutlet]="fullNameTemplate" [ngTemplateOutletContext] ="{ fullname_param: 'Yasin Sunmaz 2' }"></ng-template>
+
+        <ng-template #fullNameTemplate let-fullname_param="fullname_param">
+            <div>Benim tam adım {{fullname_param}}.</div>
+        </ng-template>
     </div>
 </mat-sidenav-content>
