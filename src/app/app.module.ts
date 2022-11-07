@@ -105,6 +105,7 @@ import { CallComponentComponent } from './components/call-component/call-compone
 import { TemplatesComponent } from './components/templates/templates.component';
 import { ModelConstructorComponent } from './components/model-constructor/model-constructor.component';
 import { ClassBindingComponent } from './components/class-binding/class-binding.component';
+import { SummaryPipe } from './pipes/summary.pipe';
 
 @NgModule({
   declarations: [
@@ -183,7 +184,8 @@ import { ClassBindingComponent } from './components/class-binding/class-binding.
     CallComponentComponent,
     TemplatesComponent,
     ModelConstructorComponent,
-    ClassBindingComponent
+    ClassBindingComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,

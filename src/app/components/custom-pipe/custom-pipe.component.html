@@ -17,6 +17,9 @@
         </p>
         <h4 class="example">Uygulamalar</h4>
         <input type="text" id="text" [(ngModel)]="text" class="form-control mb-2" mdbInput>
+        <h5>Yazılan Metnin Baş Harlerini Alma</h5>
         <p>{{ text | letterAbbreviation }}</p>
+        <h5>Yazılan Metnin İlk 5 Karakterini Alma</h5>
+        <p>{{ text | summary: 5 }}</p>
     </div>
 </mat-sidenav-content>
