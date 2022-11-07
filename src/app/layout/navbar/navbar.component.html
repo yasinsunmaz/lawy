@@ -44,7 +44,18 @@
         <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
             <h4 class="name">Yasin SUNMAZ</h4>
             <mat-divider></mat-divider>
-            <button mat-button routerLink="/" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+            <div class="mb-3 m-3">
+                <input type="text" class="form-control" [(ngModel)]="filterText" (ngModelChange)="onInputChange()"
+                    placeholder="Ara...">
+            </div>
+            <div *ngFor="let menu of FilteredNavbarMenus;">
+                <button mat-button routerLink="{{menu.menuUrl}}" [routerLinkActiveOptions]="{exact:true}"
+                    routerLinkActive="active" class="menu-button">
+                    <mat-icon>{{menu.menuIcon}}</mat-icon>
+                    <span>{{menu.menuName}}</span>
+                </button>
+            </div>
+            <!-- <button mat-button routerLink="/" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
                 class="menu-button">
                 <mat-icon>home</mat-icon>
                 <span>Anasayfa</span>
@@ -200,7 +211,7 @@
             <button mat-button routerLink="resolve" class="menu-button">
                 <mat-icon>bookmark</mat-icon>
                 <span>Resolve Yapısı</span>
-            </button>
+            </button> -->
         </mat-sidenav>
         <mat-sidenav-container>
             <div class="content mat-elevation-z8">

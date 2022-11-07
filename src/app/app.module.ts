@@ -106,6 +106,7 @@ import { TemplatesComponent } from './components/templates/templates.component';
 import { ModelConstructorComponent } from './components/model-constructor/model-constructor.component';
 import { ClassBindingComponent } from './components/class-binding/class-binding.component';
 import { SummaryPipe } from './pipes/summary.pipe';
+import { MenuSearchPipe } from './pipes/menu-search.pipe';
 
 @NgModule({
   declarations: [
@@ -185,7 +186,8 @@ import { SummaryPipe } from './pipes/summary.pipe';
     TemplatesComponent,
     ModelConstructorComponent,
     ClassBindingComponent,
-    SummaryPipe
+    SummaryPipe,
+    MenuSearchPipe
   ],
   imports: [
     BrowserModule,
