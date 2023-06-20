@@ -11,6 +11,6 @@
 last 1 Chrome version
 last 1 Firefox version
 last 2 Edge major versions
-last 2 Safari major versions
+# last 2 Safari major versions //An unhandled exception occurred: Transform failed with 1 error: error: Invalid version: "15.2-15.3" Hatasını çözmek için kaldırıldı
 last 2 iOS major versions
 Firefox ESR
